@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Estados do Brasil com IDs correspondentes -->
+  <path id="SP" d="M300,400 L400,400 L400,450 L300,450 Z" />
+  <path id="RJ" d="M400,400 L450,400 L450,430 L400,430 Z" />
+  <path id="MG" d="M300,350 L400,350 L400,400 L300,400 Z" />
+  <path id="SC" d="M300,450 L380,450 L380,480 L300,480 Z" />
+  <path id="RS" d="M300,480 L380,480 L380,520 L300,520 Z" />
+  <!-- Adicionar todos os outros estados... -->
+</svg>
