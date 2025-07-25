@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontre Nossos Representantes</title>
+
+    <!-- Dependências do Mapa (Leaflet.js) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Estilização com Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        #map {
+            height: 500px;
+            width: 100%;
+            border-radius: 0.5rem;
+            background-color: #fff;
+        }
+
+        .leaflet-interactive {
+            transition: fill-opacity 0.2s ease-in-out;
+        }
+
+        .result-item {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* .municipio-tooltip {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 4px 8px;
+            font-size: 12px;
+            font-weight: 500;
+        } */
+
+        /* Botão de Reset Zoom */
+        .reset-zoom-btn {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            z-index: 1000;
+            background: white;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65); */
+            transition: all 0.2s ease;
+        }
+
+        .reset-zoom-btn:hover {
+            background: #f4f4f4;
+            border-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .reset-zoom-btn svg {
+            width: 18px;
+            height: 18px;
+            color: #333;
+        }
+    </style>
+
+</head>
+
+<body class="bg-gray-50">
+
+    <div id="representantes-container" class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <div class="mb-8">
+            <h1 id="main-title" class="text-2xl md:text-3xl font-bold text-gray-800">Escolha sua região para encontrar
+                representantes</h1>
+            <button id="back-to-brazil" class="hidden text-blue-600 font-semibold mt-2 hover:underline">&lt; VOLTAR PARA
+                O MAPA DO BRASIL</button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+            <!-- Coluna do Mapa -->
+            <div
+                class="lg:col-span-3 bg-white p-4 sm:p-6 rounded-lg shadow-md flex items-center justify-center relative">
+                <div id="map"></div>
+                <button id="reset-zoom-btn" class="reset-zoom-btn" title="Resetar zoom">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Coluna de Busca e Resultados -->
+            <div class="lg:col-span-2">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">SEUS REPRESENTANTES</h2>
+
+                    <div class="mb-6">
+                        <input type="text" id="search-input" placeholder="Digite o nome, estado ou cidade"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                    </div>
+
+                    <div id="results-container" class="space-y-4 h-[450px] overflow-y-auto pr-2">
+                        <div id="initial-message" class="text-center py-16">
+                            <div id="loading-indicator">
+                                <svg class="animate-spin mx-auto h-12 w-12 text-blue-600"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                        stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor"
+                                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                                    </path>
+                                </svg>
+                                <p class="mt-4 text-sm text-gray-500">Carregando dados...</p>
+                            </div>
+                            <div id="default-message" class="hidden">
+                                <svg class="mx-auto h-12 w-12 text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Zm3.75 11.625a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                                </svg>
+                                <p class="mt-4 text-sm text-gray-500">Use a busca ou clique em um estado no mapa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            // --- CONFIGURAÇÃO ---
+            const jsonFileUrl = 'https://raw.githubusercontent.com/screamonei2/mapa-brasil-representantes/main/representantes.json';
+            const municipiosJsonUrl = 'https://raw.githubusercontent.com/screamonei2/mapa-brasil-representantes/main/municipios.json';
+
+            // URL do GeoJSON dos estados do Brasil
+            const brazilStatesGeoJsonUrl = 'https://raw.githubusercontent.com/fititnt/gis-dataset-brasil/master/uf/geojson/uf.json';
+
+            // --- VARIÁVEIS GLOBAIS ---
+            let representativesData = [];
+            let representativesByLocation = new Map();
+            let municipiosData = [];
+            let map;
+            let geoJsonLayer;
+            let municipiosLayer = null;
+            let selectedStateLayer = null;
+            let selectedMunicipioLayer = null;
+            let currentState = null;
+            let viewMode = 'states'; // 'states' ou 'municipios'
+
+            const searchInput = document.getElementById('search-input');
+            const resultsContainer = document.getElementById('results-container');
+            const initialMessage = document.getElementById('initial-message');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const defaultMessage = document.getElementById('default-message');
+            const backButton = document.getElementById('back-to-brazil');
+            const mainTitle = document.getElementById('main-title');
+
+            // --- FUNÇÕES DE TRANSFORMAÇÃO DE DADOS ---
+
+            function transformRepresentativesData(rawData) {
+                const representativesMap = new Map();
+                const locationMap = new Map();
+
+                const stateToAbbrev = {
+                    'SAO PAULO': 'SP', 'RIO DE JANEIRO': 'RJ', 'MINAS GERAIS': 'MG', 'BAHIA': 'BA',
+                    'PARANA': 'PR', 'RIO GRANDE DO SUL': 'RS', 'PERNAMBUCO': 'PE', 'CEARA': 'CE',
+                    'PARA': 'PA', 'SANTA CATARINA': 'SC', 'GOIAS': 'GO', 'MARANHAO': 'MA',
+                    'PARAIBA': 'PB', 'AMAZONAS': 'AM', 'ESPIRITO SANTO': 'ES', 'MATO GROSSO': 'MT',
+                    'ALAGOAS': 'AL', 'PIAUI': 'PI', 'DISTRITO FEDERAL': 'DF', 'MATO GROSSO DO SUL': 'MS',
+                    'SERGIPE': 'SE', 'RIO GRANDE DO NORTE': 'RN', 'RONDONIA': 'RO', 'ACRE': 'AC',
+                    'AMAPA': 'AP', 'RORAIMA': 'RR', 'TOCANTINS': 'TO'
+                };
+
+                for (const [estado, empresas] of Object.entries(rawData)) {
+                    const siglaEstado = stateToAbbrev[estado] || estado.substring(0, 2);
+
+                    for (const [nomeEmpresa, dadosEmpresa] of Object.entries(empresas)) {
+                        const { dados_contato, cidades_atendidas } = dadosEmpresa;
+
+                        const representante = {
+                            id: `${nomeEmpresa}_${dados_contato.codigo_representante || Math.random()}`,
+                            NomeRepresentante: nomeEmpresa,
+                            Contato: dados_contato.contato || '',
+                            email: dados_contato.email || '',
+                            celular: dados_contato.celular || '',
+                            SiglaEstado: siglaEstado,
+                            Estado: estado,
+                            CidadesAtendidas: cidades_atendidas,
+                            CodigoRepresentante: dados_contato.codigo_representante || ''
+                        };
+
+                        representativesMap.set(representante.id, representante);
+
+                        // Indexar por estado
+                        [estado, siglaEstado].forEach(key => {
+                            if (!locationMap.has(key)) locationMap.set(key, new Set());
+                            locationMap.get(key).add(representante.id);
+                        });
+
+                        // Indexar por cada cidade
+                        cidades_atendidas.forEach(cidade => {
+                            if (!locationMap.has(cidade)) locationMap.set(cidade, new Set());
+                            locationMap.get(cidade).add(representante.id);
+                        });
+                    }
+                }
+
+                representativesByLocation = locationMap;
+                return Array.from(representativesMap.values());
+            }
+
+            // --- FUNÇÕES DE BUSCA ---
+
+            function searchRepresentatives(query) {
+                if (!query) return [];
+
+                const normalizedQuery = normalize(query);
+                const foundRepresentativeIds = new Set();
+
+                for (const [location, repIds] of representativesByLocation.entries()) {
+                    if (normalize(location).includes(normalizedQuery)) {
+                        repIds.forEach(id => foundRepresentativeIds.add(id));
+                    }
+                }
+
+                representativesData.forEach(rep => {
+                    if (normalize(rep.NomeRepresentante).includes(normalizedQuery) ||
+                        normalize(rep.Contato).includes(normalizedQuery) ||
+                        normalize(rep.email).includes(normalizedQuery)) {
+                        foundRepresentativeIds.add(rep.id);
+                    }
+                });
+
+                return representativesData.filter(rep => foundRepresentativeIds.has(rep.id));
+            }
+
+            function getRepresentativesByLocation(location) {
+                const repIds = representativesByLocation.get(location) || new Set();
+                return representativesData.filter(rep => repIds.has(rep.id));
+            }
+
+            // --- FUNÇÕES DE INICIALIZAÇÃO ---
+
+            async function initializeApp() {
+                try {
+                    const [rawRepData, rawMunicipiosData] = await Promise.all([
+                        fetchJsonData(jsonFileUrl),
+                        fetchJsonData(municipiosJsonUrl)
+                    ]);
+
+                    representativesData = transformRepresentativesData(rawRepData);
+                    municipiosData = rawMunicipiosData;
+
+                    // Debug: Verificar estrutura dos dados de municípios
+                    if (municipiosData.features && municipiosData.features.length > 0) {
+                        console.log('Estrutura do primeiro município:', municipiosData.features[0].properties);
+                        console.log('Total de municípios carregados:', municipiosData.features.length);
+                    }
+
+                    await setupMap();
+                    setupEventListeners();
+                    loadingIndicator.classList.add('hidden');
+                    defaultMessage.classList.remove('hidden');
+                } catch (error) {
+                    console.error("Erro ao inicializar a aplicação:", error);
+                    initialMessage.innerHTML = `<p class="text-red-500 text-center">Falha ao carregar os dados. Verifique a conexão.</p>`;
+                }
+            }
+
+            async function fetchJsonData(url) {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`Não foi possível buscar o arquivo: ${response.statusText}`);
+                return await response.json();
+            }
+
+            async function setupMap() {
+                map = L.map('map', { zoomControl: true, attributionControl: false }).setView([-15.78, -47.92], 4);
+
+                const response = await fetch(brazilStatesGeoJsonUrl);
+                const brazilGeoJson = await response.json();
+
+                geoJsonLayer = L.geoJson(brazilGeoJson, {
+                    style: defaultMapStyle,
+                    onEachFeature: onEachStateFeature
+                }).addTo(map);
+
+                map.fitBounds(geoJsonLayer.getBounds());
+            }
+
+            function setupEventListeners() {
+                let debounceTimeout;
+                searchInput.addEventListener('input', function () {
+                    clearTimeout(debounceTimeout);
+                    debounceTimeout = setTimeout(handleSearch, 300);
+                });
+                backButton.addEventListener('click', resetView);
+
+                // Event listener para o botão de reset zoom
+                const resetZoomBtn = document.getElementById('reset-zoom-btn');
+                resetZoomBtn.addEventListener('click', function () {
+                    resetView(false); // false para não limpar a busca
+                });
+            }
+
+            // --- ESTILOS DO MAPA ---
+
+            const defaultMapStyle = { fillColor: "#3b82f6", weight: 1, opacity: 1, color: 'white', fillOpacity: 0.7 };
+            const highlightMapStyle = { weight: 3, color: '#fbbf24', fillOpacity: 0.9 };
+            const selectedMapStyle = { fillColor: "#fbbf24", fillOpacity: 1 };
+            const municipioStyle = { fillColor: "#fbbf24", weight: 1, opacity: 1, color: 'white', fillOpacity: 0.6 };
+            const municipioHighlightStyle = { weight: 2, color: '#f59e0b', fillOpacity: 0.8 };
+            const municipioSelectedStyle = { fillColor: "#f59e0b", fillOpacity: 1 };
+
+            // --- FUNÇÕES DO MAPA DE ESTADOS ---
+
+            function getStateCode(properties) {
+                // Baseado na estrutura real do uf.json
+                // Priorizar UF_05 que contém a sigla do estado (ex: "CE", "AC", "BA")
+                return properties.UF_05 || properties.uf || properties.sigla ||
+                    properties.SIGLA || properties.UF ||
+                    // Fallback para nome completo se não encontrar sigla
+                    properties.NOME_UF || properties.nome || properties.NOME ||
+                    properties.name || properties.NAME;
+            }
+
+            function onEachStateFeature(feature, layer) {
+                layer.on({
+                    mouseover: e => {
+                        if (e.target !== selectedStateLayer && viewMode === 'states') {
+                            e.target.setStyle(highlightMapStyle);
+                        }
+                    },
+                    mouseout: e => {
+                        if (e.target !== selectedStateLayer && viewMode === 'states') {
+                            geoJsonLayer.resetStyle(e.target);
+                        }
+                    },
+                    click: e => handleStateClick(e)
+                });
+            }
+
+            function handleStateClick(e) {
+                const properties = e.target.feature.properties;
+                let stateCode = getStateCode(properties);
+                let stateName = properties.nome || properties.name || properties.NAME;
+
+                // Reset do estado anterior se existir
+                if (selectedStateLayer) {
+                    geoJsonLayer.resetStyle(selectedStateLayer);
+                }
+
+                // Remove municípios anteriores se existirem
+                if (municipiosLayer) {
+                    map.removeLayer(municipiosLayer);
+                    municipiosLayer = null;
+                }
+
+                // Reset do município selecionado
+                selectedMunicipioLayer = null;
+
+                // Seleciona o novo estado
+                selectedStateLayer = e.target;
+                selectedStateLayer.setStyle(selectedMapStyle);
+                currentState = { code: stateCode, name: stateName, layer: e.target };
+
+                // Mostra municípios e filtra representantes imediatamente
+                showMunicipios(stateCode, stateName, e.target);
+                filterByState(stateCode);
+            }
+
+            // CORREÇÃO 2: Filtrar municípios apenas do estado selecionado
+            function showMunicipios(stateCode, stateName, stateLayer) {
+                // Filtrar municípios do estado usando múltiplos critérios
+                const estadoMunicipios = municipiosData.features.filter(feature => {
+                    const props = feature.properties;
+
+                    // Verificar diferentes propriedades que podem indicar o estado
+                    const municipioState = props.uf || props.estado || props.sigla_uf ||
+                        props.UF || props.ESTADO || props.cd_geocuf;
+
+                    // Comparar com código e nome do estado
+                    return municipioState === stateCode ||
+                        municipioState === stateName ||
+                        normalize(municipioState) === normalize(stateCode) ||
+                        normalize(municipioState) === normalize(stateName);
+                });
+
+                if (estadoMunicipios.length === 0) {
+                    console.log('Nenhum município encontrado para:', stateCode, stateName);
+                    console.log('Propriedades disponíveis no primeiro município:',
+                        municipiosData.features[0]?.properties);
+                    return;
+                }
+
+                console.log(`Encontrados ${estadoMunicipios.length} municípios para ${stateName}`);
+
+                // Remover layer de municípios anterior se existir
+                if (municipiosLayer) {
+                    map.removeLayer(municipiosLayer);
+                }
+
+                // Criar layer dos municípios
+                municipiosLayer = L.geoJson(estadoMunicipios, {
+                    style: municipioStyle,
+                    onEachFeature: onEachMunicipioFeature
+                }).addTo(map);
+
+                // CORREÇÃO: Usar bounds do estado original para manter o contexto
+                // mas dar um pequeno zoom nos municípios se disponível
+                if (estadoMunicipios.length > 0) {
+                    const municipiosBounds = municipiosLayer.getBounds();
+                    const stateBounds = stateLayer.getBounds();
+
+                    // Usar bounds dos municípios se estão dentro do estado,
+                    // senão usar bounds do estado
+                    if (municipiosBounds.isValid()) {
+                        map.fitBounds(municipiosBounds, { padding: [10, 10] });
+                    } else {
+                        map.fitBounds(stateBounds, { padding: [10, 10] });
+                    }
+                } else {
+                    map.fitBounds(stateLayer.getBounds(), { padding: [10, 10] });
+                }
+
+                viewMode = 'municipios';
+                mainTitle.textContent = `Municípios de ${stateName || stateCode} - Clique em um município`;
+                backButton.classList.remove('hidden');
+            }
+
+            function zoomToMunicipio(municipioName, stateName) {
+                // Primeiro, garantir que os municípios do estado estão carregados
+                const stateCode = getStateCodeByName(stateName);
+                if (!stateCode) return;
+
+                // Filtrar municípios do estado
+                const estadoMunicipios = municipiosData.features.filter(feature => {
+                    const props = feature.properties;
+                    const municipioState = props.uf || props.estado || props.sigla_uf ||
+                        props.UF || props.ESTADO || props.cd_geocuf;
+
+                    return municipioState === stateCode ||
+                        municipioState === stateName ||
+                        normalize(municipioState) === normalize(stateCode) ||
+                        normalize(municipioState) === normalize(stateName);
+                });
+
+                // Encontrar o município específico
+                const targetMunicipio = estadoMunicipios.find(feature => {
+                    const props = feature.properties;
+                    const name = props.nome || props.name || props.municipio;
+                    return normalize(name) === normalize(municipioName);
+                });
+
+                if (targetMunicipio) {
+                    // Remover municípios anteriores
+                    if (municipiosLayer) {
+                        map.removeLayer(municipiosLayer);
+                    }
+
+                    // Criar layer só com os municípios do estado
+                    municipiosLayer = L.geoJson(estadoMunicipios, {
+                        style: feature => {
+                            const name = feature.properties.nome || feature.properties.name || feature.properties.municipio;
+                            return getMunicipioStyleByRepresentative(name);
+                        },
+                        onEachFeature: onEachMunicipioFeature
+                    }).addTo(map);
+
+                    // Fazer zoom no município específico
+                    const municipioBounds = L.geoJson(targetMunicipio).getBounds();
+                    map.fitBounds(municipioBounds, { padding: [50, 50] });
+
+                    // Destacar o município
+                    const municipioLayer = municipiosLayer.getLayers().find(layer => {
+                        const props = layer.feature.properties;
+                        const name = props.nome || props.name || props.municipio;
+                        return normalize(name) === normalize(municipioName);
+                    });
+
+                    if (municipioLayer) {
+                        selectedMunicipioLayer = municipioLayer;
+                        selectedMunicipioLayer.setStyle(municipioSelectedStyle);
+                    }
+
+                    viewMode = 'municipios';
+                    mainTitle.textContent = `Município: ${municipioName}`;
+                    backButton.classList.remove('hidden');
+
+                    return true;
+                }
+
+                return false;
+            }
+
+            function getStateCodeByName(stateName) {
+                const stateToAbbrev = {
+                    'SAO PAULO': 'SP', 'RIO DE JANEIRO': 'RJ', 'MINAS GERAIS': 'MG', 'BAHIA': 'BA',
+                    'PARANA': 'PR', 'RIO GRANDE DO SUL': 'RS', 'PERNAMBUCO': 'PE', 'CEARA': 'CE',
+                    'PARA': 'PA', 'SANTA CATARINA': 'SC', 'GOIAS': 'GO', 'MARANHAO': 'MA',
+                    'PARAIBA': 'PB', 'AMAZONAS': 'AM', 'ESPIRITO SANTO': 'ES', 'MATO GROSSO': 'MT',
+                    'ALAGOAS': 'AL', 'PIAUI': 'PI', 'DISTRITO FEDERAL': 'DF', 'MATO GROSSO DO SUL': 'MS',
+                    'SERGIPE': 'SE', 'RIO GRANDE DO NORTE': 'RN', 'RONDONIA': 'RO', 'ACRE': 'AC',
+                    'AMAPA': 'AP', 'RORAIMA': 'RR', 'TOCANTINS': 'TO'
+                };
+
+                return stateToAbbrev[normalize(stateName).toUpperCase()] || null;
+            }
+
+            function onEachMunicipioFeature(feature, layer) {
+                const props = feature.properties;
+                const municipioName = props.nome || props.name || props.municipio;
+                const normalizedName = normalize(municipioName);
+                const representatives = municipioRepresentativeMap.get(normalizedName) || [];
+
+                layer.on({
+                    mouseover: e => {
+                        if (e.target !== selectedMunicipioLayer) {
+                            e.target.setStyle(municipioHighlightStyle);
+                        }
+                    },
+                    mouseout: e => {
+                        if (e.target !== selectedMunicipioLayer) {
+                            municipiosLayer.resetStyle(e.target);
+                        }
+                    },
+                    click: e => {
+                        if (selectedMunicipioLayer) {
+                            municipiosLayer.resetStyle(selectedMunicipioLayer);
+                        }
+
+                        selectedMunicipioLayer = e.target;
+                        selectedMunicipioLayer.setStyle(municipioSelectedStyle);
+
+                        filterByMunicipio(municipioName);
+                    }
+                });
+
+                // REMOVER ESTAS LINHAS:
+                // layer.bindTooltip(municipioName, {
+                //     permanent: false,
+                //     direction: 'center',
+                //     className: 'municipio-tooltip'
+                // });
+            }
+
+            function filterByMunicipio(municipioName) {
+                const results = getRepresentativesByLocation(municipioName);
+                renderResults(results, municipioName);
+                mainTitle.textContent = `Representantes em ${municipioName}`;
+                document.getElementById('results-container').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            // --- LÓGICA E RENDERIZAÇÃO ---
+
+            function normalize(str) {
+                return (str || "")
+                    .toString()
+                    .normalize("NFD")
+                    .replace(/[̀-ͯ]/g, "")
+                    .replace(/[^\w\s]/gi, "")
+                    .replace(/\s+/g, " ")
+                    .trim()
+                    .toLowerCase();
+            }
+
+            function handleSearch() {
+                const query = searchInput.value.trim();
+
+                if (!query) {
+                    resetView(false);
+                    showInitialMessage();
+                    return;
+                }
+
+                const results = searchRepresentatives(query);
+
+                if (results.length === 0) {
+                    renderResults([], query);
+                    return;
+                }
+
+                renderResults(results, query);
+
+                // Lógica de zoom baseada no tipo de busca
+                const normalizedQuery = normalize(query);
+
+                // 1. Verificar se é busca por estado (sigla ou nome)
+                let foundState = null;
+
+                // Buscar por sigla de estado
+                for (const rep of results) {
+                    if (normalize(rep.SiglaEstado) === normalizedQuery ||
+                        normalize(rep.Estado) === normalizedQuery) {
+                        foundState = { code: rep.SiglaEstado, name: rep.Estado };
+                        break;
+                    }
+                }
+
+                if (foundState) {
+                    // É uma busca por estado - simular clique no estado
+                    const stateFeature = geoJsonLayer.getLayers().find(layer => {
+                        const props = layer.feature.properties;
+                        const stateCode = getStateCode(props);
+                        const stateName = props.nome || props.name || props.NAME;
+
+                        return stateCode === foundState.code ||
+                            normalize(stateName) === normalize(foundState.name);
+                    });
+
+                    if (stateFeature) {
+                        // Reset anterior
+                        if (selectedStateLayer) {
+                            geoJsonLayer.resetStyle(selectedStateLayer);
+                        }
+                        if (municipiosLayer) {
+                            map.removeLayer(municipiosLayer);
+                            municipiosLayer = null;
+                        }
+
+                        // Selecionar estado
+                        selectedStateLayer = stateFeature;
+                        selectedStateLayer.setStyle(selectedMapStyle);
+                        currentState = foundState;
+                        currentState.layer = stateFeature;
+
+                        // Mostrar municípios
+                        showMunicipios(foundState.code, foundState.name, stateFeature);
+                        return;
+                    }
+                }
+
+                // 2. Verificar se é busca por município específico
+                const firstResult = results[0];
+                if (firstResult.CidadesAtendidas.length > 0) {
+                    const possibleMunicipio = firstResult.CidadesAtendidas.find(cidade =>
+                        normalize(cidade).includes(normalizedQuery)
+                    );
+
+                    if (possibleMunicipio && normalize(possibleMunicipio) === normalizedQuery) {
+                        // É uma busca por município específico
+                        const success = zoomToMunicipio(possibleMunicipio, firstResult.Estado);
+                        if (success) {
+                            return;
+                        }
+                    }
+                }
+
+                // 3. Fallback - zoom no primeiro estado dos resultados
+                const fallbackState = { code: firstResult.SiglaEstado, name: firstResult.Estado };
+                const stateFeature = geoJsonLayer.getLayers().find(layer => {
+                    const props = layer.feature.properties;
+                    const stateCode = getStateCode(props);
+
+                    return stateCode === fallbackState.code;
+                });
+
+                if (stateFeature) {
+                    if (selectedStateLayer) {
+                        geoJsonLayer.resetStyle(selectedStateLayer);
+                    }
+                    if (municipiosLayer) {
+                        map.removeLayer(municipiosLayer);
+                        municipiosLayer = null;
+                    }
+
+                    selectedStateLayer = stateFeature;
+                    selectedStateLayer.setStyle(selectedMapStyle);
+                    currentState = fallbackState;
+                    currentState.layer = stateFeature;
+
+                    showMunicipios(fallbackState.code, fallbackState.name, stateFeature);
+                }
+            }
+
+            function filterByState(stateCode) {
+                const results = getRepresentativesByLocation(stateCode);
+                renderResults(results, stateCode);
+                mainTitle.textContent = `Representantes em ${stateCode} - Clique em um município para mais detalhes`;
+                backButton.classList.remove('hidden');
+                viewMode = 'municipios'; // Já mudamos para modo municípios
+                document.getElementById('results-container').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            function zoomToLocation(estado, cidade) {
+                if (cidade && estado) {
+                    fetch(`https://nominatim.openstreetmap.org/search?city=${encodeURIComponent(cidade)}&state=${encodeURIComponent(estado)}&country=Brasil&format=json&limit=1`)
+                        .then(res => res.json())
+                        .then(data => {
+                            if (data.length > 0) {
+                                map.setView([parseFloat(data[0].lat), parseFloat(data[0].lon)], 11);
+                            }
+                        })
+                        .catch(err => console.log('Erro ao buscar coordenadas:', err));
+                }
+            }
+
+            function renderResults(results, location = null) {
+                if (!results.length) {
+                    resultsContainer.innerHTML = `<div class="text-center text-gray-500 py-8">Nenhum representante encontrado${location ? ' para "' + location + '"' : ''}.</div>`;
+                    return;
+                }
+
+                resultsContainer.innerHTML = results.map(item => `
+                <div class="result-item bg-blue-50 rounded-lg p-4 shadow-sm">
+                    <div class="font-semibold text-blue-800 text-lg mb-2">${item.NomeRepresentante}</div>
+                    ${item.Contato ? `<div class="text-gray-700 text-sm mb-1"><span class="font-medium">Contato:</span> ${item.Contato}</div>` : ''}
+                    <div class="text-gray-700 text-sm mb-1"><span class="font-medium">Estado:</span> ${item.Estado} (${item.SiglaEstado})</div>
+                    <div class="text-gray-700 text-sm mb-2"><span class="font-medium">Cidades atendidas:</span> ${item.CidadesAtendidas.slice(0, 5).join(', ')}${item.CidadesAtendidas.length > 5 ? ` e mais ${item.CidadesAtendidas.length - 5} cidades` : ''}</div>
+                    ${item.email ? `<div class="text-gray-700 text-sm mb-1"><span class="font-medium">E-mail:</span> <a href="mailto:${item.email}" class="text-blue-600 underline">${item.email}</a></div>` : ''}
+                    ${item.celular ? `<div class="text-gray-700 text-sm"><span class="font-medium">Celular:</span> <a href="tel:${item.celular}" class="text-blue-600 underline">${item.celular}</a></div>` : ''}
+                </div>
+            `).join('');
+            }
+
+            function showInitialMessage() {
+                resultsContainer.innerHTML = '<div class="text-center text-gray-500 py-8">Digite uma cidade ou estado para encontrar representantes, ou clique no mapa.</div>';
+            }
+
+            function resetView(clearSearch = true) {
+                // Reset de todas as seleções
+                if (selectedStateLayer) {
+                    geoJsonLayer.resetStyle(selectedStateLayer);
+                    selectedStateLayer = null;
+                }
+
+                if (selectedMunicipioLayer) {
+                    selectedMunicipioLayer = null;
+                }
+
+                if (municipiosLayer) {
+                    map.removeLayer(municipiosLayer);
+                    municipiosLayer = null;
+                }
+
+                currentState = null;
+                viewMode = 'states';
+
+                map.setView([-15.78, -47.92], 4);
+                if (clearSearch) searchInput.value = '';
+                showInitialMessage();
+                backButton.classList.add('hidden');
+                mainTitle.textContent = 'Escolha sua região para encontrar representantes';
+
+                // Remove legenda de cores se existir
+                const existingLegend = document.getElementById('color-legend');
+                if (existingLegend) {
+                    existingLegend.remove();
+                }
+            }
+
+            initializeApp();
+        });
+        // --- SISTEMA DE CORES POR REPRESENTANTE ---
+
+
+        const representativeColors = [
+            '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7',
+            '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9',
+            '#F8C471', '#82E0AA', '#F1948A', '#85C1E9', '#D7BDE2',
+            '#A3E4D7', '#F9E79F', '#D5A6BD', '#AED6F1', '#A9DFBF',
+            '#FAD7A0', '#D2B4DE', '#AED6F1', '#A3E4D7', '#F7DC6F'
+        ];
+
+        let representativeColorMap = new Map();
+        let colorIndex = 0;
+
+        function getRepresentativeColor(representativeName) {
+            if (!representativeColorMap.has(representativeName)) {
+                representativeColorMap.set(representativeName, representativeColors[colorIndex % representativeColors.length]);
+                colorIndex++;
+            }
+            return representativeColorMap.get(representativeName);
+        }
+
+        // Função para criar mapa de municípios por representante
+        function createMunicipioRepresentativeMap() {
+            const municipioRepMap = new Map();
+
+            representativesData.forEach(rep => {
+                rep.CidadesAtendidas.forEach(cidade => {
+                    const normalizedCidade = normalize(cidade);
+                    if (!municipioRepMap.has(normalizedCidade)) {
+                        municipioRepMap.set(normalizedCidade, []);
+                    }
+                    municipioRepMap.get(normalizedCidade).push({
+                        nome: rep.NomeRepresentante,
+                        cor: getRepresentativeColor(rep.NomeRepresentante)
+                    });
+                });
+            });
+
+            return municipioRepMap;
+        }
+
+        let municipioRepresentativeMap = new Map();
+
+        // --- ESTILOS DINÂMICOS PARA MUNICÍPIOS ---
+
+        function getMunicipioStyleByRepresentative(municipioName) {
+            const normalizedName = normalize(municipioName);
+            const representatives = municipioRepresentativeMap.get(normalizedName);
+
+            if (representatives && representatives.length > 0) {
+                // Se múltiplos representantes, usar a primeira cor com padrão listrado
+                const primaryColor = representatives[0].cor;
+
+                if (representatives.length > 1) {
+                    // Múltiplos representantes - usar padrão especial
+                    return {
+                        fillColor: primaryColor,
+                        weight: 2,
+                        opacity: 1,
+                        color: '#333',
+                        fillOpacity: 0.7,
+                        dashArray: '5, 5' // Padrão pontilhado para indicar múltiplos representantes
+                    };
+                } else {
+                    // Um representante
+                    return {
+                        fillColor: primaryColor,
+                        weight: 1,
+                        opacity: 1,
+                        color: 'white',
+                        fillOpacity: 0.8
+                    };
+                }
+            }
+
+            // Sem representante - cor padrão
+            return {
+                fillColor: '#fbbf24',
+                weight: 1,
+                opacity: 1,
+                color: 'white',
+                fillOpacity: 0.6
+            };
+        }
+
+        // --- ATUALIZAR FUNÇÃO showMunicipios ---
+
+        function showMunicipios(stateCode, stateName, stateLayer) {
+            // Inicializar mapa de representantes se ainda não foi feito
+            if (municipioRepresentativeMap.size === 0) {
+                municipioRepresentativeMap = createMunicipioRepresentativeMap();
+            }
+
+            // Filtrar municípios do estado usando múltiplos critérios
+            const estadoMunicipios = municipiosData.features.filter(feature => {
+                const props = feature.properties;
+
+                // Verificar diferentes propriedades que podem indicar o estado
+                const municipioState = props.uf || props.estado || props.sigla_uf ||
+                    props.UF || props.ESTADO || props.cd_geocuf;
+
+                // Comparar com código e nome do estado
+                return municipioState === stateCode ||
+                    municipioState === stateName ||
+                    normalize(municipioState) === normalize(stateCode) ||
+                    normalize(municipioState) === normalize(stateName);
+            });
+
+            if (estadoMunicipios.length === 0) {
+                console.log('Nenhum município encontrado para:', stateCode, stateName);
+                return;
+            }
+
+            console.log(`Encontrados ${estadoMunicipios.length} municípios para ${stateName}`);
+
+            // Remover layer de municípios anterior se existir
+            if (municipiosLayer) {
+                map.removeLayer(municipiosLayer);
+            }
+
+            // Criar layer dos municípios com cores por representante
+            municipiosLayer = L.geoJson(estadoMunicipios, {
+                style: feature => {
+                    const municipioName = feature.properties.nome || feature.properties.name || feature.properties.municipio;
+                    return getMunicipioStyleByRepresentative(municipioName);
+                },
+                onEachFeature: onEachMunicipioFeature
+            }).addTo(map);
+
+            // Zoom nos municípios
+            if (estadoMunicipios.length > 0) {
+                const municipiosBounds = municipiosLayer.getBounds();
+                const stateBounds = stateLayer.getBounds();
+
+                if (municipiosBounds.isValid()) {
+                    map.fitBounds(municipiosBounds, { padding: [10, 10] });
+                } else {
+                    map.fitBounds(stateBounds, { padding: [10, 10] });
+                }
+            } else {
+                map.fitBounds(stateLayer.getBounds(), { padding: [10, 10] });
+            }
+
+            viewMode = 'municipios';
+            mainTitle.textContent = `Municípios de ${stateName || stateCode} - Cores por representante`;
+            backButton.classList.remove('hidden');
+
+            // Mostrar legenda de cores
+            showColorLegend(stateCode, stateName);
+        }
+
+        // --- LEGENDA DE CORES ---
+
+        function showColorLegend(stateCode, stateName) {
+            // Coletar representantes únicos para este estado
+            const stateRepresentatives = new Set();
+
+            representativesData.forEach(rep => {
+                if (rep.SiglaEstado === stateCode || rep.Estado === stateName) {
+                    stateRepresentatives.add(rep.NomeRepresentante);
+                }
+            });
+
+            // Criar HTML da legenda
+            let legendHtml = '<div class="mt-4 p-3 bg-gray-100 rounded-lg"><h4 class="font-semibold mb-2">Legenda - Representantes:</h4>';
+
+            stateRepresentatives.forEach(repName => {
+                const color = getRepresentativeColor(repName);
+                legendHtml += `
+                <div class="flex items-center mb-1">
+                    <div class="w-4 h-4 rounded mr-2" style="background-color: ${color};"></div>
+                    <span class="text-sm">${repName}</span>
+                </div>
+            `;
+            });
+
+            legendHtml += '<div class="flex items-center mb-1"><div class="w-4 h-4 rounded mr-2 border-2 border-dashed border-gray-400" style="background-color: #CCCCCC;"></div><span class="text-sm">Múltiplos representantes</span></div>';
+            legendHtml += '</div>';
+
+            // Adicionar legenda ao container de resultados
+            const legendContainer = document.createElement('div');
+            legendContainer.innerHTML = legendHtml;
+            legendContainer.id = 'color-legend';
+
+            // Remover legenda anterior se existir
+            const existingLegend = document.getElementById('color-legend');
+            if (existingLegend) {
+                existingLegend.remove();
+            }
+
+            resultsContainer.appendChild(legendContainer);
+        }
+
+        // --- ATUALIZAR onEachMunicipioFeature ---
+
+        function onEachMunicipioFeature(feature, layer) {
+            const props = feature.properties;
+            const municipioName = props.nome || props.name || props.municipio;
+            const normalizedName = normalize(municipioName);
+            const representatives = municipioRepresentativeMap.get(normalizedName) || [];
+
+            layer.on({
+                mouseover: e => {
+                    if (e.target !== selectedMunicipioLayer) {
+                        e.target.setStyle(municipioHighlightStyle);
+                    }
+                },
+                mouseout: e => {
+                    if (e.target !== selectedMunicipioLayer) {
+                        municipiosLayer.resetStyle(e.target);
+                    }
+                },
+                click: e => {
+                    if (selectedMunicipioLayer) {
+                        municipiosLayer.resetStyle(selectedMunicipioLayer);
+                    }
+
+                    selectedMunicipioLayer = e.target;
+                    selectedMunicipioLayer.setStyle(municipioSelectedStyle);
+
+                    filterByMunicipio(municipioName);
+                }
+            });
+
+            // REMOVER ESTAS LINHAS:
+            // let tooltipText = municipioName;
+            // if (representatives.length > 0) {
+            //     tooltipText += `\n\nRepresentantes:\n${representatives.map(r => r.nome).join('\n')}`;
+            // } else {
+            //     tooltipText += '\n\nSem representante';
+            // }
+            // 
+            // layer.bindTooltip(tooltipText, {
+            //     permanent: false,
+            //     direction: 'center',
+            //     className: 'municipio-tooltip'
+            // });
+        }
+    </script>
+
+</body>
+
+</html>
