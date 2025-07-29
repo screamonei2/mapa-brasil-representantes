@@ -1,0 +1,4441 @@
+{
+  "estatisticas": {
+    "total_ocorrencias": 788,
+    "cidades_unicas": 593,
+    "representantes_afetados": 39
+  },
+  "motivos": {
+    "Possível grafia alternativa ou nome antigo": 586,
+    "Município não identificado no arquivo geográfico": 3,
+    "Nome muito genérico (sigla de estado)": 1,
+    "Possível bairro ou distrito": 3
+  },
+  "cidades_detalhadas": [
+    {
+      "cidade": "SAO JOSE DOS CAMPOS",
+      "frequencia": 6,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTANA DE PARNAIBA",
+      "frequencia": 6,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PAULINIA",
+      "frequencia": 6,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JUNDIAI",
+      "frequencia": 5,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUAIRA",
+      "frequencia": 5,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTO ANDRE",
+      "frequencia": 4,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MAUA",
+      "frequencia": 4,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JACAREI",
+      "frequencia": 4,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TAUBATE",
+      "frequencia": 4,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ARUJA",
+      "frequencia": 4,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTA BARBARA D OESTE",
+      "frequencia": 4,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JAGUARIUNA",
+      "frequencia": 4,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO JOSE DO RIO PRETO",
+      "frequencia": 4,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BRAGANCA PAULISTA",
+      "frequencia": 4,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SUMARE",
+      "frequencia": 4,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CORDEIROPOLIS",
+      "frequencia": 4,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AMERICO BRASILIENSE",
+      "frequencia": 4,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ANTONIO CARLOS",
+      "frequencia": 4,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "VALENCA",
+      "frequencia": 4,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TATUI",
+      "frequencia": 3,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CABREUVA",
+      "frequencia": 3,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BOA ESPERANCA DO SUL",
+      "frequencia": 3,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AGUAI",
+      "frequencia": 3,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MOGI MIRIM",
+      "frequencia": 3,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MARILIA",
+      "frequencia": 3,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "VALPARAISO",
+      "frequencia": 3,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "LENCOIS PAULISTA",
+      "frequencia": 3,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TIETE",
+      "frequencia": 3,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITAPUI",
+      "frequencia": 3,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITAUNA",
+      "frequencia": 3,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "VICOSA",
+      "frequencia": 3,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PARA DE MINAS",
+      "frequencia": 3,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "HORTOLANDIA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "EMBU DAS ARTES",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ORLANDIA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "OLIMPIA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CARAPICUIBA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IBIUNA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "POA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Município não identificado no arquivo geográfico"
+    },
+    {
+      "cidade": "CACAPAVA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JACARE",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TREMEMBE",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUARATINGUETA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO BENTO DO SAPUCAI",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CERQUEIRA CESAR",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUAREI",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NAZARE PAULISTA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AGUAS DE LINDOIA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "COSMOPOLIS",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTO ANTONIO DE POSSE",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "LINDOIA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IBATE",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TAMBAU",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUARA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PRADOPOLIS",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TIMBO",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PARAGUACU",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "HERVAL D OESTE",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ANAPOLIS",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO JOSE DO RIO PARDO",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JUNQUEIROPOLIS",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PENAPOLIS",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PRESIDENTE EPITACIO",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PARAGUACU PAULISTA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ALVARES MACHADO",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AVARE",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IGARACU DO TIETE",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CAFELANDIA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MINEIROS DO TIETE",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MOGI GUACU",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ESPIRITO SANTO DO PINHAL",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GOIANIA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BELEM",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "VENANCIO AIRES",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TEUTONIA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO SEBASTIAO DO CAI",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BENTO GONCALVES",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PARANAVAI",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ALMIRANTE TAMANDARE",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "QUEDAS DO IGUACU",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "FOZ DO IGUACU",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TELEMACO BORBA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JOAQUIM TAVORA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO JOSE DOS PINHAIS",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ARAUCARIA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CARAMBEI",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTO ANTONIO DA PLATINA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PAICANDU",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MARINGA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AMPERE",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTO ANTONIO DO SUDOESTE",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CRICIUMA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "XANXERE",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO JOSE",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JARAGUA DO SUL",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BIGUACU",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CAMBORIU",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITAJAI",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PICARRAS",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BALNEARIO PICARRAS",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JOACABA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TAIO",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BALNEARIO CAMBORIU",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CACADOR",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MORRO DA FUMACA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "FLORIANOPOLIS",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TRES CORACOES",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "UBERLANDIA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTANA DO PARAISO",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PATROCINIO",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ARAXA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ELOI MENDES",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITAJUBA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CLAUDIO",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BOA ESPERANCA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ALPINOPOLIS",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SABARA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "UBA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Município não identificado no arquivo geográfico"
+    },
+    {
+      "cidade": "MANHUACU",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IBIRITE",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MAGE",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NITEROI",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PIRAI",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TANGUA",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO GONCALO",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PARAIBA DO SUL",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MACAE",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TERESOPOLIS",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TRES RIOS",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BARRA DO PIRAI",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITABORAI",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NILOPOLIS",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITAGUAI",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NOVA IGUACU",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PETROPOLIS",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO JOSE DO VALE DO RIO PRETO",
+      "frequencia": 2,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PIRITUBA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SP",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Nome muito genérico (sigla de estado)"
+    },
+    {
+      "cidade": "PARIQUERA-ACU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MONGAGUA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITANHAEM",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PERUIBE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUARUJA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO LUIS DO PARAITINGA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JOANOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JUNDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "VARZEA PAULISTA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PATROCINIO PAULISTA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JARDINOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CASSIA DOS COQUEIROS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "LUIS ANTONIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SEVERINIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BALSAMO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTA FE DO SUL",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUARACAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTA CLARA D OESTE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MENDONCA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IPIGUA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MIRANDOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IBIRA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "LUIZIANIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTA ADELIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SEBASTIANOPOLIS DO SUL",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PEDRANOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JOSE BONIFACIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ALVARES FLORENCE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITAPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NOVA ALIANCA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ESTRELA D OESTE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PALMEIRA D OESTE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TRES FRONTEIRAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUAPIACU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MONCOES",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "FERNANDOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ARACATUBA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTO ANASTACIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AVAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AREIOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "POMPEIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "LUCELIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUATAPARA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "RIBEIRAO DOS INDIOS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BORACEIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JAU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Município não identificado no arquivo geográfico"
+    },
+    {
+      "cidade": "RINOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CANDIDO MOTA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "REGENTE FEIJO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "QUATA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUAICARA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PIRAJUI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "HERCULANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PRATANIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GARCA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "INUBIA PAULISTA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AGUAS DE SAO PEDRO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IPEUNA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "DOIS CORREGOS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ANALANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IRACEMAPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CESARIO LANGE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ARACOIABA DA SERRA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ARACARIGUAMA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITARARE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IPERO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TAQUARIVAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "APIAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SARAPUI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ALUMINIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "RIOLANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "DIVINOLANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NAZARE DA MATA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO CAETANO DO NAVIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTO AGOSTINHO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CABO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITAMBE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ALIANCA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO LOURENCO DA MATA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "VITORIA DE SANTO ANTAO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CUSTODIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GRAVATA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AFRANIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JACARAU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CATOLE DO ROCHA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TAMBAUZINHO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TRES ARROIOS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ESPERANCA DO SUL",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTO ANGELO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IBIRUBA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BOA VISTA DO BURICA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NOVA ARACA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "VERANOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SERAFINA CORREA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUAPORE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO LOURENCO DO SUL",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO JOSE DO NORTE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ANTONIO PRADO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO JOSE DO INHACORA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IBIACA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ENTRE-IJUIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IJUI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BAGE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TRES PASSOS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GIRUA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SALTO DO JACUI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MIRAGUAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CANDELARIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TAQUARUCU DO SUL",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JULIO DE CASTILHOS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NOVA PETROPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CANDIDO GODOI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO JOAO DO POLESINE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CAIBATE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MUCUM",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NOVA ESPERANCA DO SUL",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GETULIO VARGAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CACAPAVA DO SUL",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ESTACAO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TRES DE MAIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO JOSE DO HERVAL",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TRES COROAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BALNEARIO PINHAL",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "OSORIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PICADA CAFE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO JOSE DO SUL",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "POCO DAS ANTAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BOM PRINCIPIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MORUNGAVA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO JERONIMO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUAIBA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "XANGRI-LA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ESTANCIA VELHA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GRAVATAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TRAMANDAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PAROBE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TRES CACHOEIRAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTO ANTONIO DA PATRULHA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MARIPA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "RENASCENCA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JAGUARIAIVA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NOVA ESPERANCA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ROLANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MATELANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO PEDRO DO PARANA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ASSAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CORBELIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CORNELIO PROCOPIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CRUZEIRO DO IGUACU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SERTANOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CIDADE GAUCHA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MANDAGUACU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NOVA PRATA DO IGUACU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO MIGUEL DO IGUACU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CAMBE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CAMBARA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PARAISO DO NORTE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CANDIDO DE ABREU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTA FE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CENTENARIO DO SUL",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PEROLA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ANDIRA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITAIPULANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO TOME",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CAPITAO LEONIDAS MARQUES",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO CARLOS DO IVAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CEU AZUL",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ALTONIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TRES BARRAS DO PARANA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MARECHAL CANDIDO RONDON",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO PEDRO DO IVAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUAJUVIRA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MARIOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PIRAI DO SUL",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "UNIAO DA VITORIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "INACIO MARTINS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TUNAS DO PARANA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PONTAL DO PARANA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITAPERUCU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SENGES",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SABAUDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PARANAGUA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IVAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BOCAIUVA DO SUL",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAUDADE DO IGUACU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITAPEJARA D OESTE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PORTELANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GOIAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MINACU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITABERAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CAMPO LIMPO DE GOIAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "QUIRINOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GOIANAPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JATAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SILVANIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "VALPARAISO DE GOIAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NEROPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CORUMBAIBA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITAUCU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TEREZOPOLIS DE GOIAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO LUIS DE MONTES BELOS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BELA VISTA DE GOIAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ABADIANIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ACREUNA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "APARECIDA DE GOIANIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "LUZIANIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PILAR DE GOIAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUAPO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "DOVERLANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NIQUELANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTA HELENA DE GOIAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "HIDROLANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CORREGO RICO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NAZARIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ABADIA DE GOIAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CRIXAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "URUACU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BOM JESUS DE GOIAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GOIANESIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ALEXANIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITAIOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BRACO DO TROMBUDO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO BONIFACIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PRESIDENTE GETULIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PETROLANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "DIONISIO CERQUEIRA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CONCORDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTA CECILIA DO SUL",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ICARA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "LEBON REGIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TRES BARRAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUARUJA DO SUL",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GRAO PARA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO MIGUEL D OESTE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ARARANGUA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "APIUNA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PESCARIA BRAVA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO JOAO DO ITAPERIU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TUNAPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "VILA DE VOLTA GRANDE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível bairro ou distrito"
+    },
+    {
+      "cidade": "MONDAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CHAPECO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BOTUVERA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ARMAZEM",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BRACO DO NORTE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITAPOA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PALHOCA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CORUPA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AGUAS MORNAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AGROLANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ZORTEA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUATAMBU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TREZE TILIAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "OTACILIO COSTA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SIDEROPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IOMERE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ESTACAO COCAL",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO LOURENCO DO OESTE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TANGARA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AGRONOMICA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "POCONE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AGUA BOA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CUIABA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TANGARA DA SERRA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "QUERENCIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NOVA OLIMPIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "VARZEA GRANDE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JUINA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "COLIDER",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "RONDONOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MATUPA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NAVIRAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITAQUIRAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SIDROLANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TRES LAGOAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "LADARIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CAARAPO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AGUA CLARA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GLORIA DE DOURADOS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "DEODAPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CORUMBA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PARANAIBA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AMAMBAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CASSILANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ANASTACIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BATAIPORA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO JOSE DA VARGINHA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "RIO PARANAIBA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "INHAUMA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTA VITORIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CANAPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "VERISSIMO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "UNAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IBIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PRESIDENTE OLEGARIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CARMO DO PARANAIBA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BRASILIA DE MINAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "POCOS DE CALDAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CORACAO DE JESUS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUARANESIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BRASOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CASSIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "VIRGINIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CARVALHOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JESUANIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITAU DE MINAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO SEBASTIAO DO PARAISO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TAPIRAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUAXUPE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PARAISOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CRUZILIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTANA DO JACARE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PRATAPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTA RITA DO SAPUCAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TRES PONTAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "INGAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "POCO FUNDO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SILVIANOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO LOURENCO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "DELFINOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO GONCALO DO SAPUCAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CONCEICAO DOS OUROS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CAMBUI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TEOFILO OTONI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CORREGO FUNDO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "DIVINOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CAPITOLIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TIMOTEO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IGARAPE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AGUAS FORMOSAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CARMOPOLIS DE MINAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "FELIXLANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CAETES",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ANTONIO DIAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MATIPO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CONCEICAO DO PARA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO JOSE DA LAPA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ALVINOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IMBE DE MINAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "VARZEA DA PALMA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CAPITAO ENEAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JANAUBA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "URUCANIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTO ANTONIO DO MONTE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MARIO CAMPOS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ARACAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CAETANOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BOCAIUVA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ATALEIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITATIAIUCU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CAETE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ABAETE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AIMORES",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTO ANTONIO DO AMPARO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUAPE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ALTO JEQUITIBA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MURIAE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "DIVINESIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PAULA CANDIDO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO GONCALO DO PARA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO SEBASTIAO DA VITORIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ALEM PARAIBA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MIRAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "QUIXADA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "EUSEBIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MARACANAU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ICAPUI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTANA DO ACARAU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TIANGUA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ALCANTARAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO GONCALO DO AMARANTE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "VITORIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CONCEICAO DA BARRA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NOVA VENECIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITAOCA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "VILA VALERIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível bairro ou distrito"
+    },
+    {
+      "cidade": "VINHATICO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JAGUARE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TIMBUI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CONCEICAO DO CASTELO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GUACUI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AFONSO CLAUDIO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PIUMA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MARATAIZES",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JERONIMO MONTEIRO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO ROQUE DO CANNAA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IBIRACU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BRASILIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "NUCLEO BANDEIRANTE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "RIACHO FUNDO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CEILANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GAMA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "LUIS EDUARDO MAGALHAES",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CACULE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "JEQUIE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "LICINIO DE ALMEIDA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTO ANTONIO DE JESUS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO SEBASTIAO DO PASSE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BARRA DO CHOCA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CONCEICAO DO COITE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ILHEUS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CAMACARI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CONCEICAO DO JACUIPE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITIRUCU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO GONCALO DOS CAMPOS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "POCOES",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "DIAS D AVILA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível bairro ou distrito"
+    },
+    {
+      "cidade": "VITORIA DA CONQUISTA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "HUMILDES",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AGUA FRIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ITUBERA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CONCEICAO DA FEIRA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "EUNAPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ANDARAI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "IPIAU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO FIDELIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTANESIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO CRISTOVAO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTO ANTONIO DE PADUA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CAMPOS ELYSEOS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CONCEICAO DE MACABU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BONSUCESSO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CALIFORNIA DA BARRA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "RETIRO DO MURIAE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PARAPEUNA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MARICA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO JOSE DO TURVO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "DORANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SEROPEDICA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "GOITACAZES",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PARNAIBA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AGUA BRANCA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "LUZILANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SIMPLICIO MENDES",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "VALENCA DO PIAUI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO MIGUEL DO GUAMA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MURUCUPI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ELDORADO DOS CARAJAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TAILANDIA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "VITORIA DO XINGU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ULIANOPOLIS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTAREM",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "ORIXIMINA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "PORTO TROMBETAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SAO FELIX DO XINGU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "MARABA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TUCURUI",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "BRAGANCA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "TOME-ACU",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "CANAA DOS CARAJAS",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "AGUA AZUL DO NORTE",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "REDENCAO",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTO ANTONIO DO TAUA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    },
+    {
+      "cidade": "SANTA ISABEL DO PARA",
+      "frequencia": 1,
+      "similares": [],
+      "motivo": "Possível grafia alternativa ou nome antigo"
+    }
+  ],
+  "representantes_afetados": {
+    "3.0 - GIL-ANGIO INTERMEDIAÇÃO DE SERVIÇOS LTDA": [
+      "HORTOLANDIA",
+      "SANTO ANDRE",
+      "MAUA",
+      "TATUI",
+      "SAO JOSE DOS CAMPOS",
+      "EMBU DAS ARTES",
+      "SANTANA DE PARNAIBA",
+      "ORLANDIA",
+      "OLIMPIA",
+      "JACAREI",
+      "PAULINIA"
+    ],
+    "4.0 - GL - REPRESENTAÇÃO COMERCIAL LTDA": [
+      "SANTO ANDRE",
+      "SAO JOSE DOS CAMPOS",
+      "TAUBATE",
+      "ARUJA"
+    ],
+    "7.01 - LM PRIME REPRESENTAÇÃO CML LTDA": [
+      "CABREUVA",
+      "SANTO ANDRE",
+      "CARAPICUIBA",
+      "SANTANA DE PARNAIBA",
+      "ARUJA",
+      "SANTA BARBARA D OESTE",
+      "PIRITUBA",
+      "SP",
+      "PAULINIA"
+    ],
+    "9.02 - SCHIOPPA": [
+      "IBIUNA",
+      "JUNDIAI",
+      "CARAPICUIBA",
+      "EMBU DAS ARTES",
+      "JAGUARIUNA",
+      "SANTANA DE PARNAIBA"
+    ],
+    "10.01 - A MORAIS REPRESENTACAO COMERCIAL LTDA": [
+      "POA",
+      "SANTO ANDRE",
+      "MAUA",
+      "CACAPAVA",
+      "PAULINIA",
+      "ARUJA"
+    ],
+    "12.0 - RPGN REPRESENTAÇÕES DE MAD E FERR LTDA": [
+      "PARIQUERA-ACU",
+      "MONGAGUA",
+      "SAO JOSE DOS CAMPOS",
+      "ITANHAEM",
+      "PERUIBE",
+      "GUARUJA"
+    ],
+    "21.01 - LUMAK REPRESENTAÇÕES LTDA": [
+      "JACARE",
+      "SAO LUIS DO PARAITINGA",
+      "TREMEMBE",
+      "CACAPAVA",
+      "GUARATINGUETA",
+      "SAO JOSE DOS CAMPOS",
+      "TAUBATE",
+      "JAGUARIUNA",
+      "SAO BENTO DO SAPUCAI",
+      "SANTANA DE PARNAIBA",
+      "SAO JOSE DO RIO PRETO",
+      "JACAREI",
+      "PAULINIA"
+    ],
+    "23.01 - THIAGO LINARES": [
+      "CERQUEIRA CESAR",
+      "GUAREI",
+      "JOANOPOLIS",
+      "BRAGANCA PAULISTA",
+      "JUNDIA",
+      "CABREUVA",
+      "NAZARE PAULISTA",
+      "MAUA",
+      "BOA ESPERANCA DO SUL",
+      "JUNDIAI",
+      "SANTANA DE PARNAIBA",
+      "SUMARE",
+      "VARZEA PAULISTA",
+      "PAULINIA"
+    ],
+    "24.0 - GENTIL E GENTIL REPRESENTAÇÕES LTDA-ME": [
+      "AGUAS DE LINDOIA",
+      "AGUAI",
+      "BRAGANCA PAULISTA",
+      "HORTOLANDIA",
+      "NAZARE PAULISTA",
+      "GUARATINGUETA",
+      "SAO JOSE DOS CAMPOS",
+      "JUNDIAI",
+      "COSMOPOLIS",
+      "JAGUARIUNA",
+      "SANTO ANTONIO DE POSSE",
+      "SAO BENTO DO SAPUCAI",
+      "SUMARE",
+      "ARUJA",
+      "SANTA BARBARA D OESTE",
+      "MOGI MIRIM",
+      "CORDEIROPOLIS",
+      "AMERICO BRASILIENSE",
+      "LINDOIA",
+      "MARILIA",
+      "PAULINIA"
+    ],
+    "25.0 - FERNANDO GUERRERA JUNIOR - ME": [
+      "IBATE",
+      "PATROCINIO PAULISTA",
+      "TAMBAU",
+      "GUARA",
+      "JARDINOPOLIS",
+      "PRADOPOLIS",
+      "MAUA",
+      "BOA ESPERANCA DO SUL",
+      "GUAIRA",
+      "CASSIA DOS COQUEIROS",
+      "ORLANDIA",
+      "SAO JOSE DO RIO PRETO",
+      "AMERICO BRASILIENSE",
+      "LUIS ANTONIO",
+      "SEVERINIA"
+    ],
+    "20.0 - DAYANE ASSESSORIA E REPRESENTACOES LTDA": [
+      "TIMBO",
+      "PARAGUACU",
+      "TAUBATE",
+      "HERVAL D OESTE",
+      "ANAPOLIS"
+    ],
+    "26.0 - ROBERTO DA FONSECA REIS&REIS REP.LTDA": [
+      "BALSAMO",
+      "SAO JOSE DO RIO PARDO",
+      "SANTA FE DO SUL",
+      "GUARACAI",
+      "JUNQUEIROPOLIS",
+      "SANTA CLARA D OESTE",
+      "MENDONCA",
+      "IPIGUA",
+      "MIRANDOPOLIS",
+      "IBIRA",
+      "PENAPOLIS",
+      "LUIZIANIA",
+      "SANTA ADELIA",
+      "SEBASTIANOPOLIS DO SUL",
+      "GUAIRA",
+      "PEDRANOPOLIS",
+      "SAO JOSE DO RIO PRETO",
+      "VALPARAISO",
+      "PRESIDENTE EPITACIO",
+      "MARILIA",
+      "OLIMPIA",
+      "JOSE BONIFACIO",
+      "ALVARES FLORENCE",
+      "ITAPOLIS",
+      "PARAGUACU PAULISTA",
+      "NOVA ALIANCA",
+      "ALVARES MACHADO",
+      "ESTRELA D OESTE",
+      "PALMEIRA D OESTE",
+      "TRES FRONTEIRAS",
+      "LENCOIS PAULISTA",
+      "GUAPIACU",
+      "MONCOES",
+      "FERNANDOPOLIS",
+      "ARACATUBA",
+      "SANTO ANASTACIO"
+    ],
+    "30.0 - 3L REPRESENTACOES COMERCIAIS LTDA ME": [
+      "AVAI",
+      "AGUAI",
+      "TREMEMBE",
+      "JUNQUEIROPOLIS",
+      "AREIOPOLIS",
+      "POMPEIA",
+      "LUCELIA",
+      "GUATAPARA",
+      "PENAPOLIS",
+      "AVARE",
+      "RIBEIRAO DOS INDIOS",
+      "BORACEIA",
+      "JAU",
+      "GUAIRA",
+      "RINOPOLIS",
+      "JUNDIAI",
+      "SAO JOSE DO RIO PRETO",
+      "AMERICO BRASILIENSE",
+      "PRESIDENTE EPITACIO",
+      "CANDIDO MOTA",
+      "MARILIA",
+      "REGENTE FEIJO",
+      "PARAGUACU PAULISTA",
+      "IGARACU DO TIETE",
+      "CAFELANDIA",
+      "QUATA",
+      "GUAICARA",
+      "PIRAJUI",
+      "SANTANA DE PARNAIBA",
+      "ALVARES MACHADO",
+      "MINEIROS DO TIETE",
+      "JACAREI",
+      "HERCULANDIA",
+      "TIETE",
+      "ITAPUI",
+      "LENCOIS PAULISTA",
+      "SAO JOSE DOS CAMPOS",
+      "PRATANIA",
+      "GARCA",
+      "INUBIA PAULISTA"
+    ],
+    "38.0 - RODIFER REPRESENTAÇÕES LTDA": [
+      "TAMBAU",
+      "AGUAI",
+      "COSMOPOLIS",
+      "LINDOIA",
+      "AGUAS DE LINDOIA",
+      "MOGI GUACU",
+      "BRAGANCA PAULISTA",
+      "GUAIRA",
+      "VALPARAISO",
+      "CORDEIROPOLIS",
+      "AMERICO BRASILIENSE",
+      "AGUAS DE SAO PEDRO",
+      "IPEUNA",
+      "DOIS CORREGOS",
+      "IGARACU DO TIETE",
+      "TATUI",
+      "SANTO ANTONIO DE POSSE",
+      "SUMARE",
+      "MOGI MIRIM",
+      "MINEIROS DO TIETE",
+      "JACAREI",
+      "IBATE",
+      "TIETE",
+      "ITAPUI",
+      "LENCOIS PAULISTA",
+      "PRADOPOLIS",
+      "ANALANDIA",
+      "ESPIRITO SANTO DO PINHAL",
+      "IRACEMAPOLIS",
+      "SANTA BARBARA D OESTE"
+    ],
+    "38.04 - NEW REPRESENTAÇÃO S/S LTDA EPP": [
+      "ITAI",
+      "CERQUEIRA CESAR",
+      "CESARIO LANGE",
+      "IBIUNA",
+      "ARACOIABA DA SERRA",
+      "ARACARIGUAMA",
+      "BRAGANCA PAULISTA",
+      "AVARE",
+      "ITARARE",
+      "JUNDIAI",
+      "JAGUARIUNA",
+      "CORDEIROPOLIS",
+      "IPERO",
+      "TAQUARIVAI",
+      "CABREUVA",
+      "JACARE",
+      "BOA ESPERANCA DO SUL",
+      "TATUI",
+      "APIAI",
+      "TIETE",
+      "SARAPUI",
+      "GUAREI",
+      "ITAPUI",
+      "TAUBATE",
+      "ALUMINIO",
+      "POA",
+      "RIOLANDIA"
+    ],
+    "39.0 - TS SASSE REPRESENTAÇÕES COMERCIAIS LTDA": [
+      "MOGI GUACU",
+      "SAO JOSE DO RIO PARDO",
+      "ESPIRITO SANTO DO PINHAL",
+      "DIVINOLANDIA",
+      "SUMARE",
+      "SANTA BARBARA D OESTE",
+      "MOGI MIRIM",
+      "CORDEIROPOLIS"
+    ],
+    "17.0 - A.GOUVEIA REPRESENTACOES  DE EQUIPS LTDA": [
+      "NAZARE DA MATA",
+      "SAO CAETANO DO NAVIO",
+      "SANTO AGOSTINHO",
+      "CABO",
+      "ITAMBE",
+      "ALIANCA",
+      "SAO LOURENCO DA MATA",
+      "GOIANIA",
+      "VITORIA DE SANTO ANTAO",
+      "CUSTODIA",
+      "GRAVATA",
+      "AFRANIO"
+    ],
+    "19.0 - ALR CONSULTORIA EMPRESARIAL INDUSTRIAL A": [
+      "JACARAU",
+      "CATOLE DO ROCHA",
+      "BELEM",
+      "TAMBAUZINHO"
+    ],
+    "28.0 - MYRALP COMERCIO E REPRESENTAÇÕES LTDA": [
+      "TRES ARROIOS",
+      "ESPERANCA DO SUL",
+      "SANTO ANGELO",
+      "IBIRUBA",
+      "BOA VISTA DO BURICA",
+      "NOVA ARACA",
+      "VERANOPOLIS",
+      "SERAFINA CORREA",
+      "GUAPORE",
+      "SAO LOURENCO DO SUL",
+      "SAO JOSE DO NORTE",
+      "VENANCIO AIRES",
+      "ANTONIO PRADO",
+      "SAO JOSE DO INHACORA",
+      "IBIACA",
+      "ENTRE-IJUIS",
+      "IJUI",
+      "BAGE",
+      "TRES PASSOS",
+      "GIRUA",
+      "SALTO DO JACUI",
+      "MIRAGUAI",
+      "CANDELARIA",
+      "TAQUARUCU DO SUL",
+      "JULIO DE CASTILHOS",
+      "NOVA PETROPOLIS",
+      "CANDIDO GODOI",
+      "TEUTONIA",
+      "SAO JOAO DO POLESINE",
+      "CAIBATE",
+      "SAO SEBASTIAO DO CAI",
+      "MUCUM",
+      "NOVA ESPERANCA DO SUL",
+      "GETULIO VARGAS",
+      "CACAPAVA DO SUL",
+      "ESTACAO",
+      "TRES DE MAIO",
+      "SAO JOSE DO HERVAL",
+      "BENTO GONCALVES"
+    ],
+    "29.01 - ATTEX COM. IMP E REPRESENTAÇÕES LTDA": [
+      "TRES COROAS",
+      "BALNEARIO PINHAL",
+      "OSORIO",
+      "PICADA CAFE",
+      "SAO JOSE DO SUL",
+      "POCO DAS ANTAS",
+      "BOM PRINCIPIO",
+      "VENANCIO AIRES",
+      "MORUNGAVA",
+      "SAO JERONIMO",
+      "GUAIBA",
+      "XANGRI-LA",
+      "ESTANCIA VELHA",
+      "TEUTONIA",
+      "GRAVATAI",
+      "SAO SEBASTIAO DO CAI",
+      "TRAMANDAI",
+      "PAROBE",
+      "TRES CACHOEIRAS",
+      "BENTO GONCALVES",
+      "SANTO ANTONIO DA PATRULHA"
+    ],
+    "36.01 - ROUND REPRESENTACOES LTDA": [
+      "MARIPA",
+      "PARANAVAI",
+      "ALMIRANTE TAMANDARE",
+      "RENASCENCA",
+      "JAGUARIAIVA",
+      "NOVA ESPERANCA",
+      "ROLANDIA",
+      "MATELANDIA",
+      "SAO PEDRO DO PARANA",
+      "ASSAI",
+      "CORBELIA",
+      "QUEDAS DO IGUACU",
+      "FOZ DO IGUACU",
+      "CORNELIO PROCOPIO",
+      "CRUZEIRO DO IGUACU",
+      "SERTANOPOLIS",
+      "CIDADE GAUCHA",
+      "TELEMACO BORBA",
+      "GUAIRA",
+      "MANDAGUACU",
+      "JOAQUIM TAVORA",
+      "SAO JOSE DOS PINHAIS",
+      "NOVA PRATA DO IGUACU",
+      "SAO MIGUEL DO IGUACU",
+      "ARAUCARIA",
+      "CAFELANDIA",
+      "CAMBE",
+      "CAMBARA",
+      "PARAISO DO NORTE",
+      "CARAMBEI",
+      "SANTO ANTONIO DA PLATINA",
+      "PAICANDU",
+      "CANDIDO DE ABREU",
+      "SANTA FE",
+      "MARINGA",
+      "CENTENARIO DO SUL",
+      "PEROLA",
+      "ANDIRA",
+      "AMPERE",
+      "ITAIPULANDIA",
+      "SAO TOME",
+      "CAPITAO LEONIDAS MARQUES",
+      "SAO CARLOS DO IVAI",
+      "SANTO ANTONIO DO SUDOESTE",
+      "CEU AZUL",
+      "ALTONIA",
+      "TRES BARRAS DO PARANA",
+      "MARECHAL CANDIDO RONDON"
+    ],
+    "40.01 - LIBER MARKETING E REPRESENTACAO LTDA": [
+      "AMPERE",
+      "ARAUCARIA",
+      "ALMIRANTE TAMANDARE",
+      "PARANAVAI",
+      "SAO PEDRO DO IVAI",
+      "GUAJUVIRA",
+      "MARIOPOLIS",
+      "PIRAI DO SUL",
+      "SANTO ANTONIO DO SUDOESTE",
+      "TELEMACO BORBA",
+      "UNIAO DA VITORIA",
+      "INACIO MARTINS",
+      "QUEDAS DO IGUACU",
+      "CARAMBEI",
+      "JOAQUIM TAVORA",
+      "SAO JOSE DOS PINHAIS",
+      "TUNAS DO PARANA",
+      "SANTO ANTONIO DA PLATINA",
+      "PAICANDU",
+      "PONTAL DO PARANA",
+      "ITAPERUCU",
+      "SENGES",
+      "MARINGA",
+      "SABAUDIA",
+      "PARANAGUA",
+      "IVAI",
+      "BOCAIUVA DO SUL",
+      "SAUDADE DO IGUACU",
+      "ITAPEJARA D OESTE",
+      "FOZ DO IGUACU"
+    ],
+    "32.0 - CENTRAL REPRESENTAÇÕES LTDA": [
+      "PORTELANDIA",
+      "GOIAS",
+      "MINACU",
+      "ITABERAI",
+      "CAMPO LIMPO DE GOIAS",
+      "QUIRINOPOLIS",
+      "GOIANAPOLIS",
+      "JATAI",
+      "SILVANIA",
+      "VALPARAISO DE GOIAS",
+      "NEROPOLIS",
+      "CORUMBAIBA",
+      "ITAUCU",
+      "TEREZOPOLIS DE GOIAS",
+      "SAO LUIS DE MONTES BELOS",
+      "BELA VISTA DE GOIAS",
+      "ABADIANIA",
+      "GOIANIA",
+      "ACREUNA",
+      "APARECIDA DE GOIANIA",
+      "LUZIANIA",
+      "PILAR DE GOIAS",
+      "GUAPO",
+      "DOVERLANDIA",
+      "NIQUELANDIA",
+      "SANTA HELENA DE GOIAS",
+      "HIDROLANDIA",
+      "ANAPOLIS",
+      "CORREGO RICO",
+      "NAZARIO",
+      "ABADIA DE GOIAS",
+      "VALPARAISO",
+      "CRIXAS",
+      "URUACU",
+      "BOM JESUS DE GOIAS",
+      "GOIANESIA",
+      "ALEXANIA"
+    ],
+    "35.01 - ZIER REPRESENTAÇÕES LTDA.": [
+      "ITAIOPOLIS",
+      "CRICIUMA",
+      "XANXERE",
+      "SAO JOSE",
+      "BRACO DO TROMBUDO",
+      "SAO BONIFACIO",
+      "JARAGUA DO SUL",
+      "BIGUACU",
+      "CAMBORIU",
+      "PRESIDENTE GETULIO",
+      "PETROLANDIA",
+      "ITAJAI",
+      "PICARRAS",
+      "DIONISIO CERQUEIRA",
+      "CONCORDIA",
+      "SANTA CECILIA DO SUL",
+      "BALNEARIO PICARRAS",
+      "ICARA",
+      "LEBON REGIS",
+      "JOACABA",
+      "TRES BARRAS",
+      "GUARUJA DO SUL",
+      "GRAO PARA",
+      "TAIO",
+      "SAO MIGUEL D OESTE",
+      "ARARANGUA",
+      "BALNEARIO CAMBORIU",
+      "TIMBO",
+      "APIUNA",
+      "PESCARIA BRAVA",
+      "SAO JOAO DO ITAPERIU",
+      "TUNAPOLIS",
+      "VILA DE VOLTA GRANDE",
+      "CACADOR",
+      "MONDAI",
+      "CHAPECO",
+      "BOTUVERA",
+      "ARMAZEM",
+      "BRACO DO NORTE",
+      "ITAPOA",
+      "PALHOCA",
+      "MORRO DA FUMACA",
+      "CORUPA",
+      "AGUAS MORNAS",
+      "AGROLANDIA",
+      "ZORTEA",
+      "GUATAMBU",
+      "TREZE TILIAS",
+      "OTACILIO COSTA",
+      "SIDEROPOLIS",
+      "ANTONIO CARLOS",
+      "IOMERE",
+      "FLORIANOPOLIS",
+      "ESTACAO COCAL",
+      "SAO LOURENCO DO OESTE",
+      "TANGARA",
+      "HERVAL D OESTE",
+      "AGRONOMICA"
+    ],
+    "37.0 - IZAFER REPRESENTAÇÃO LTDA": [
+      "BALNEARIO CAMBORIU",
+      "BALNEARIO PICARRAS",
+      "CRICIUMA",
+      "XANXERE",
+      "MORRO DA FUMACA",
+      "JOACABA",
+      "SAO JOSE",
+      "CACADOR",
+      "TAIO",
+      "FLORIANOPOLIS",
+      "JARAGUA DO SUL",
+      "BIGUACU",
+      "CAMBORIU",
+      "ITAJAI",
+      "PICARRAS"
+    ],
+    "33.0 - PELINSSON REPRESENTAÇÕES LTDA": [
+      "POCONE",
+      "AGUA BOA",
+      "CUIABA",
+      "TANGARA DA SERRA",
+      "QUERENCIA",
+      "NOVA OLIMPIA",
+      "VARZEA GRANDE",
+      "JUINA",
+      "COLIDER",
+      "RONDONOPOLIS",
+      "MATUPA"
+    ],
+    "34.0 - SA & PESSOA REPRESENTACAO COMERCIAL LTDA": [
+      "NAVIRAI",
+      "ITAQUIRAI",
+      "SIDROLANDIA",
+      "TRES LAGOAS",
+      "LADARIO",
+      "CAARAPO",
+      "AGUA CLARA",
+      "GLORIA DE DOURADOS",
+      "DEODAPOLIS",
+      "CORUMBA",
+      "PARANAIBA",
+      "AMAMBAI",
+      "CASSILANDIA",
+      "ANASTACIO",
+      "BATAIPORA"
+    ],
+    "42.0 - RG REPRESENTAÇÕES LTDA": [
+      "TRES CORACOES",
+      "SAO JOSE DA VARGINHA",
+      "UBERLANDIA",
+      "RIO PARANAIBA",
+      "INHAUMA",
+      "SANTA VITORIA",
+      "CANAPOLIS",
+      "SANTANA DO PARAISO",
+      "ITAUNA",
+      "PATROCINIO",
+      "VERISSIMO",
+      "VICOSA",
+      "ARAXA",
+      "UNAI",
+      "IBIA",
+      "PARA DE MINAS",
+      "PRESIDENTE OLEGARIO",
+      "CARMO DO PARANAIBA",
+      "BRASILIA DE MINAS",
+      "ELOI MENDES"
+    ],
+    "45.0 - GILBERTO RAIMUNDO BRAGA E CIA LTDA": [
+      "POCOS DE CALDAS",
+      "PATROCINIO",
+      "CORACAO DE JESUS",
+      "GUARANESIA",
+      "BRASOPOLIS",
+      "CASSIA",
+      "PARAGUACU",
+      "TRES CORACOES",
+      "VIRGINIA",
+      "CARVALHOPOLIS",
+      "JESUANIA",
+      "ITAU DE MINAS",
+      "ITAUNA",
+      "SAO SEBASTIAO DO PARAISO",
+      "TAPIRAI",
+      "GUAXUPE",
+      "PARAISOPOLIS",
+      "ITAJUBA",
+      "CRUZILIA",
+      "SANTANA DO JACARE",
+      "PRATAPOLIS",
+      "PARA DE MINAS",
+      "ELOI MENDES",
+      "SANTA RITA DO SAPUCAI",
+      "TRES PONTAS",
+      "CLAUDIO",
+      "INGAI",
+      "POCO FUNDO",
+      "SILVIANOPOLIS",
+      "SAO LOURENCO",
+      "DELFINOPOLIS",
+      "ANTONIO CARLOS",
+      "BOA ESPERANCA",
+      "SAO GONCALO DO SAPUCAI",
+      "CONCEICAO DOS OUROS",
+      "ALPINOPOLIS",
+      "CAMBUI"
+    ],
+    "48.0 - GTR REPRESENTAÇÕES LTDA": [
+      "TEOFILO OTONI",
+      "CORREGO FUNDO",
+      "DIVINOPOLIS",
+      "ARAXA",
+      "CAPITOLIO",
+      "SABARA",
+      "TIMOTEO",
+      "IGARAPE",
+      "AGUAS FORMOSAS",
+      "CARMOPOLIS DE MINAS",
+      "FELIXLANDIA",
+      "CAETES",
+      "ITAUNA",
+      "ANTONIO DIAS",
+      "MATIPO",
+      "CONCEICAO DO PARA",
+      "SAO JOSE DA LAPA",
+      "ALVINOPOLIS",
+      "IMBE DE MINAS",
+      "VARZEA DA PALMA",
+      "CAPITAO ENEAS",
+      "ITAJUBA",
+      "SANTANA DO PARAISO",
+      "JANAUBA",
+      "URUCANIA",
+      "SANTO ANTONIO DO MONTE",
+      "UBA",
+      "VICOSA",
+      "MARIO CAMPOS",
+      "ARACAI",
+      "MANHUACU",
+      "PARA DE MINAS",
+      "IBIRITE",
+      "UBERLANDIA",
+      "CLAUDIO",
+      "CAETANOPOLIS",
+      "BOCAIUVA",
+      "ATALEIA",
+      "ITATIAIUCU",
+      "CAETE",
+      "ANTONIO CARLOS",
+      "ABAETE",
+      "BOA ESPERANCA",
+      "AIMORES",
+      "SANTO ANTONIO DO AMPARO",
+      "ALPINOPOLIS",
+      "GUAPE"
+    ],
+    "48.01 - RINCO REPRESENTAÇÕES": [
+      "ALTO JEQUITIBA",
+      "MURIAE",
+      "DIVINESIA",
+      "PAULA CANDIDO",
+      "SAO GONCALO DO PARA",
+      "ANTONIO CARLOS",
+      "UBA",
+      "SAO SEBASTIAO DA VITORIA",
+      "VICOSA",
+      "ALEM PARAIBA",
+      "SABARA",
+      "MANHUACU",
+      "IBIRITE",
+      "MIRAI"
+    ],
+    "43.0 - ROD LON REPRESENTAÇÕES LTDA": [
+      "QUIXADA",
+      "EUSEBIO",
+      "MARACANAU",
+      "ICAPUI",
+      "SANTANA DO ACARAU",
+      "TIANGUA",
+      "ALCANTARAS",
+      "SAO GONCALO DO AMARANTE"
+    ],
+    "44.0 - BEMAC REPRESENTAÇÕES LTDA": [
+      "VITORIA",
+      "CONCEICAO DA BARRA",
+      "NOVA VENECIA",
+      "ITAOCA",
+      "VILA VALERIO",
+      "VINHATICO",
+      "JAGUARE",
+      "TIMBUI",
+      "CONCEICAO DO CASTELO",
+      "GUACUI",
+      "AFONSO CLAUDIO",
+      "PIUMA",
+      "MARATAIZES",
+      "JERONIMO MONTEIRO",
+      "SAO ROQUE DO CANNAA",
+      "IBIRACU"
+    ],
+    "50.01 - RUMO CERTO REPRESENTACOES LTDA": [
+      "BRASILIA",
+      "GUARA",
+      "NUCLEO BANDEIRANTE",
+      "RIACHO FUNDO",
+      "CEILANDIA",
+      "GAMA"
+    ],
+    "51.0 - A3 CONSULTORIA, REPRES E SERVIÇOS EIRELI": [
+      "LUIS EDUARDO MAGALHAES",
+      "CACULE",
+      "JEQUIE",
+      "LICINIO DE ALMEIDA",
+      "SANTO ANTONIO DE JESUS",
+      "SAO SEBASTIAO DO PASSE",
+      "BARRA DO CHOCA",
+      "CONCEICAO DO COITE",
+      "ILHEUS",
+      "CAMACARI",
+      "CONCEICAO DO JACUIPE",
+      "ITIRUCU",
+      "SAO GONCALO DOS CAMPOS",
+      "POCOES",
+      "DIAS D AVILA",
+      "VITORIA DA CONQUISTA",
+      "VALENCA",
+      "HUMILDES",
+      "AGUA FRIA",
+      "ITUBERA",
+      "CONCEICAO DA FEIRA",
+      "EUNAPOLIS",
+      "ANDARAI",
+      "IPIAU"
+    ],
+    "52.0 - MRB COMERCIO E REPRESENTAÇÃO LTDA": [
+      "MAGE",
+      "NITEROI",
+      "PIRAI",
+      "TANGUA",
+      "SAO GONCALO",
+      "PARAIBA DO SUL",
+      "MACAE",
+      "SAO FIDELIS",
+      "TERESOPOLIS",
+      "TRES RIOS",
+      "VALENCA",
+      "BARRA DO PIRAI",
+      "ITABORAI",
+      "NILOPOLIS",
+      "SANTANESIA",
+      "ITAGUAI",
+      "SAO CRISTOVAO",
+      "NOVA IGUACU",
+      "PETROPOLIS",
+      "SAO JOSE DO VALE DO RIO PRETO",
+      "SANTO ANTONIO DE PADUA"
+    ],
+    "52.01 - L323 REPRES.DE FERRAGENS E FERRAM. EIREI": [
+      "CAMPOS ELYSEOS",
+      "MAGE",
+      "CONCEICAO DE MACABU",
+      "TRES RIOS",
+      "NILOPOLIS",
+      "ITAGUAI",
+      "BONSUCESSO",
+      "SAO JOSE DO VALE DO RIO PRETO",
+      "CALIFORNIA DA BARRA",
+      "PIRAI",
+      "TANGUA",
+      "PARAIBA DO SUL",
+      "VALENCA",
+      "NOVA IGUACU",
+      "NITEROI",
+      "RETIRO DO MURIAE",
+      "MACAE",
+      "TERESOPOLIS",
+      "BARRA DO PIRAI",
+      "ITABORAI",
+      "PARAPEUNA",
+      "PETROPOLIS",
+      "MARICA",
+      "SAO JOSE DO TURVO",
+      "DORANDIA",
+      "SEROPEDICA",
+      "GOITACAZES",
+      "SAO GONCALO"
+    ],
+    "54.01 - FERNANDO MURILO REPRESENTAÇÕES LTDA - ME": [
+      "PARNAIBA",
+      "AGUA BRANCA",
+      "VALENCA",
+      "LUZILANDIA",
+      "SIMPLICIO MENDES",
+      "VALENCA DO PIAUI"
+    ],
+    "82.0 - JUMPER COM. SERVIÇOS E REPRES.LTDA-EPP": [
+      "SAO MIGUEL DO GUAMA",
+      "MURUCUPI",
+      "ELDORADO DOS CARAJAS",
+      "TAILANDIA",
+      "VITORIA DO XINGU",
+      "ULIANOPOLIS",
+      "SANTAREM",
+      "ORIXIMINA",
+      "PORTO TROMBETAS",
+      "SAO FELIX DO XINGU",
+      "MARABA",
+      "TUCURUI",
+      "BRAGANCA",
+      "TOME-ACU",
+      "BELEM",
+      "CANAA DOS CARAJAS",
+      "AGUA AZUL DO NORTE",
+      "REDENCAO",
+      "SANTO ANTONIO DO TAUA",
+      "SANTA ISABEL DO PARA"
+    ]
+  }
+}

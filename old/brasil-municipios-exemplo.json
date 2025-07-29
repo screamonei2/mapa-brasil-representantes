@@ -1,0 +1,120 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "3550308",
+        "name": "São Paulo",
+        "description": "São Paulo",
+        "uf_municipio": "SP - São Paulo"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[
+          -46.825,-23.966
+        ],[
+          -46.825,-23.365
+        ],[
+          -46.365,-23.365
+        ],[
+          -46.365,-23.966
+        ],[
+          -46.825,-23.966
+        ]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "3304557",
+        "name": "Rio de Janeiro",
+        "description": "Rio de Janeiro",
+        "uf_municipio": "RJ - Rio de Janeiro"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[
+          -43.796,-23.082
+        ],[
+          -43.796,-22.746
+        ],[
+          -43.099,-22.746
+        ],[
+          -43.099,-23.082
+        ],[
+          -43.796,-23.082
+        ]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "5300108",
+        "name": "Brasília",
+        "description": "Brasília",
+        "uf_municipio": "DF - Brasília"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[
+          -48.110,-15.870
+        ],[
+          -48.110,-15.460
+        ],[
+          -47.420,-15.460
+        ],[
+          -47.420,-15.870
+        ],[
+          -48.110,-15.870
+        ]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "2927408",
+        "name": "Salvador",
+        "description": "Salvador",
+        "uf_municipio": "BA - Salvador"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[
+          -38.592,-13.016
+        ],[
+          -38.592,-12.839
+        ],[
+          -38.411,-12.839
+        ],[
+          -38.411,-13.016
+        ],[
+          -38.592,-13.016
+        ]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "2304400",
+        "name": "Fortaleza",
+        "description": "Fortaleza",
+        "uf_municipio": "CE - Fortaleza"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[
+          -38.627,-3.849
+        ],[
+          -38.627,-3.640
+        ],[
+          -38.408,-3.640
+        ],[
+          -38.408,-3.849
+        ],[
+          -38.627,-3.849
+        ]]]
+      }
+    }
+  ]
+}

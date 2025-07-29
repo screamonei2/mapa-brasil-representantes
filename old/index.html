@@ -328,7 +328,7 @@
         document.addEventListener('DOMContentLoaded', async function () {
             // --- CONFIGURAÇÃO ---
             const jsonFileUrl = './representantes.json';
-            const municipiosJsonUrl = './municipios.json';
+            const municipiosJsonUrl = './geojs-100-mun-v2.json';
 
             // URL do GeoJSON dos estados do Brasil
             const brazilStatesGeoJsonUrl = './uf.json';
@@ -421,7 +421,7 @@
                             if (!locationMap.has(cidade)) locationMap.set(cidade, new Set());
                             locationMap.get(cidade).add(representante.id);
                             
-                            // Mapear município para representante
+                            // Mapear município para representante (objeto completo)
                             if (!municipioRepresentativeMap.has(normalizedCidade)) {
                                 municipioRepresentativeMap.set(normalizedCidade, []);
                             }
@@ -480,6 +480,7 @@
                     if (municipiosData.features && municipiosData.features.length > 0) {
                         console.log('Estrutura do primeiro município:', municipiosData.features[0].properties);
                         console.log('Total de municípios carregados:', municipiosData.features.length);
+                        console.log('Propriedades disponíveis:', Object.keys(municipiosData.features[0].properties));
                     }
 
                     await setupMap();
@@ -671,15 +672,23 @@
                 filterByState(stateCode);
             }
 
-            // CORREÇÃO 2: Filtrar municípios apenas do estado selecionado
+            // Filtrar municípios apenas do estado selecionado
             function showMunicipios(stateCode, stateName, stateLayer) {
                 // Filtrar municípios do estado usando múltiplos critérios
                 const estadoMunicipios = municipiosData.features.filter(feature => {
                     const props = feature.properties;
 
-                    // Verificar diferentes propriedades que podem indicar o estado
-                    const municipioState = props.uf || props.estado || props.sigla_uf ||
+                    // Para geojs-100-mun-v2.json, extrair UF do campo uf_municipio (formato: "UF - Município")
+                    let municipioState = props.uf || props.estado || props.sigla_uf ||
                         props.UF || props.ESTADO || props.cd_geocuf;
+                    
+                    // Se não encontrou, tentar extrair do uf_municipio
+                    if (!municipioState && props.uf_municipio) {
+                        const match = props.uf_municipio.match(/^([A-Z]{2})\s*-/);
+                        if (match) {
+                            municipioState = match[1];
+                        }
+                    }
 
                     // Comparar com código e nome do estado
                     return municipioState === stateCode ||
@@ -705,13 +714,13 @@
                 // Criar layer dos municípios com cores por representante
                 municipiosLayer = L.geoJson(estadoMunicipios, {
                     style: feature => {
-                        const municipioName = feature.properties.nome || feature.properties.name || feature.properties.municipio;
+                        const municipioName = feature.properties.name || feature.properties.nome || feature.properties.municipio || feature.properties.description;
                         return getMunicipioStyleByRepresentative(municipioName);
                     },
                     onEachFeature: onEachMunicipioFeature
                 }).addTo(map);
 
-                // CORREÇÃO: Usar bounds do estado original para manter o contexto
+                // Usar bounds do estado original para manter o contexto
                 // mas dar um pequeno zoom nos municípios se disponível
                 if (estadoMunicipios.length > 0) {
                     const municipiosBounds = municipiosLayer.getBounds();
@@ -748,8 +757,16 @@
                 // Filtrar municípios do estado
                 const estadoMunicipios = municipiosData.features.filter(feature => {
                     const props = feature.properties;
-                    const municipioState = props.uf || props.estado || props.sigla_uf ||
+                    let municipioState = props.uf || props.estado || props.sigla_uf ||
                         props.UF || props.ESTADO || props.cd_geocuf;
+                    
+                    // Para geojs-100-mun-v2.json, extrair UF do campo uf_municipio
+                    if (!municipioState && props.uf_municipio) {
+                        const match = props.uf_municipio.match(/^([A-Z]{2})\s*-/);
+                        if (match) {
+                            municipioState = match[1];
+                        }
+                    }
 
                     return municipioState === stateCode ||
                         municipioState === stateName ||
@@ -773,7 +790,7 @@
                     // Criar layer só com os municípios do estado
                     municipiosLayer = L.geoJson(estadoMunicipios, {
                         style: feature => {
-                            const name = feature.properties.nome || feature.properties.name || feature.properties.municipio;
+                            const name = feature.properties.name || feature.properties.nome || feature.properties.municipio || feature.properties.description;
                             return getMunicipioStyleByRepresentative(name);
                         },
                         onEachFeature: onEachMunicipioFeature
@@ -786,7 +803,7 @@
                     // Destacar o município
                     const municipioLayer = municipiosLayer.getLayers().find(layer => {
                         const props = layer.feature.properties;
-                        const name = props.nome || props.name || props.municipio;
+                        const name = props.name || props.nome || props.municipio || props.description;
                         return normalize(name) === normalize(municipioName);
                     });
 
@@ -821,7 +838,7 @@
 
             function onEachMunicipioFeature(feature, layer) {
                 const props = feature.properties;
-                const municipioName = props.nome || props.name || props.municipio;
+                const municipioName = props.name || props.nome || props.municipio || props.description;
                 const normalizedName = normalize(municipioName);
                 const representatives = municipioRepresentativeMap.get(normalizedName) || [];
 
@@ -868,13 +885,6 @@
                     direction: 'top',
                     className: 'municipio-tooltip'
                 });
-
-                // REMOVER ESTAS LINHAS:
-                // layer.bindTooltip(municipioName, {
-                //     permanent: false,
-                //     direction: 'center',
-                //     className: 'municipio-tooltip'
-                // });
             }
 
             function filterByMunicipio(municipioName) {
@@ -1093,247 +1103,7 @@
 
             initializeApp();
         });
-        // --- SISTEMA DE CORES POR REPRESENTANTE ---
-
-
-        const representativeColors = [
-            '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7',
-            '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9',
-            '#F8C471', '#82E0AA', '#F1948A', '#85C1E9', '#D7BDE2',
-            '#A3E4D7', '#F9E79F', '#D5A6BD', '#AED6F1', '#A9DFBF',
-            '#FAD7A0', '#D2B4DE', '#AED6F1', '#A3E4D7', '#F7DC6F'
-        ];
-
-        let representativeColorMap = new Map();
-        let colorIndex = 0;
-
-        function getRepresentativeColor(representativeName) {
-            if (!representativeColorMap.has(representativeName)) {
-                representativeColorMap.set(representativeName, representativeColors[colorIndex % representativeColors.length]);
-                colorIndex++;
-            }
-            return representativeColorMap.get(representativeName);
-        }
-
-        // Função para criar mapa de municípios por representante
-        function createMunicipioRepresentativeMap() {
-            const municipioRepMap = new Map();
-
-            representativesData.forEach(rep => {
-                rep.CidadesAtendidas.forEach(cidade => {
-                    const normalizedCidade = normalize(cidade);
-                    if (!municipioRepMap.has(normalizedCidade)) {
-                        municipioRepMap.set(normalizedCidade, []);
-                    }
-                    municipioRepMap.get(normalizedCidade).push({
-                        nome: rep.NomeRepresentante,
-                        cor: getRepresentativeColor(rep.NomeRepresentante)
-                    });
-                });
-            });
-
-            return municipioRepMap;
-        }
-
-        let municipioRepresentativeMap = new Map();
-
-        // --- ESTILOS DINÂMICOS PARA MUNICÍPIOS ---
-
-        function getMunicipioStyleByRepresentative(municipioName) {
-            const normalizedName = normalize(municipioName);
-            const representatives = municipioRepresentativeMap.get(normalizedName);
-
-            if (representatives && representatives.length > 0) {
-                // Se múltiplos representantes, usar a primeira cor com padrão listrado
-                const primaryColor = representatives[0].cor;
-
-                if (representatives.length > 1) {
-                    // Múltiplos representantes - usar padrão especial
-                    return {
-                        fillColor: primaryColor,
-                        weight: 2,
-                        opacity: 1,
-                        color: '#333',
-                        fillOpacity: 0.7,
-                        dashArray: '5, 5' // Padrão pontilhado para indicar múltiplos representantes
-                    };
-                } else {
-                    // Um representante
-                    return {
-                        fillColor: primaryColor,
-                        weight: 1,
-                        opacity: 1,
-                        color: 'white',
-                        fillOpacity: 0.8
-                    };
-                }
-            }
-
-            // Sem representante - cor padrão
-            return {
-                fillColor: '#fbbf24',
-                weight: 1,
-                opacity: 1,
-                color: 'white',
-                fillOpacity: 0.6
-            };
-        }
-
-        // --- ATUALIZAR FUNÇÃO showMunicipios ---
-
-        function showMunicipios(stateCode, stateName, stateLayer) {
-            // Inicializar mapa de representantes se ainda não foi feito
-            if (municipioRepresentativeMap.size === 0) {
-                municipioRepresentativeMap = createMunicipioRepresentativeMap();
-            }
-
-            // Filtrar municípios do estado usando múltiplos critérios
-            const estadoMunicipios = municipiosData.features.filter(feature => {
-                const props = feature.properties;
-
-                // Verificar diferentes propriedades que podem indicar o estado
-                const municipioState = props.uf || props.estado || props.sigla_uf ||
-                    props.UF || props.ESTADO || props.cd_geocuf;
-
-                // Comparar com código e nome do estado
-                return municipioState === stateCode ||
-                    municipioState === stateName ||
-                    normalize(municipioState) === normalize(stateCode) ||
-                    normalize(municipioState) === normalize(stateName);
-            });
-
-            if (estadoMunicipios.length === 0) {
-                console.log('Nenhum município encontrado para:', stateCode, stateName);
-                return;
-            }
-
-            console.log(`Encontrados ${estadoMunicipios.length} municípios para ${stateName}`);
-
-            // Remover layer de municípios anterior se existir
-            if (municipiosLayer) {
-                map.removeLayer(municipiosLayer);
-            }
-
-            // Criar layer dos municípios com cores por representante
-            municipiosLayer = L.geoJson(estadoMunicipios, {
-                style: feature => {
-                    const municipioName = feature.properties.nome || feature.properties.name || feature.properties.municipio;
-                    return getMunicipioStyleByRepresentative(municipioName);
-                },
-                onEachFeature: onEachMunicipioFeature
-            }).addTo(map);
-
-            // Zoom nos municípios
-            if (estadoMunicipios.length > 0) {
-                const municipiosBounds = municipiosLayer.getBounds();
-                const stateBounds = stateLayer.getBounds();
-
-                if (municipiosBounds.isValid()) {
-                    map.fitBounds(municipiosBounds, { padding: [10, 10] });
-                } else {
-                    map.fitBounds(stateBounds, { padding: [10, 10] });
-                }
-            } else {
-                map.fitBounds(stateLayer.getBounds(), { padding: [10, 10] });
-            }
-
-            viewMode = 'municipios';
-            mainTitle.textContent = `Municípios de ${stateName || stateCode} - Cores por representante`;
-            backButton.classList.remove('hidden');
-
-            // Mostrar legenda de cores
-            showColorLegend(stateCode, stateName);
-        }
-
-        // --- LEGENDA DE CORES ---
-
-        function showColorLegend(stateCode, stateName) {
-            // Coletar representantes únicos para este estado
-            const stateRepresentatives = new Set();
-
-            representativesData.forEach(rep => {
-                if (rep.SiglaEstado === stateCode || rep.Estado === stateName) {
-                    stateRepresentatives.add(rep.NomeRepresentante);
-                }
-            });
-
-            // Criar HTML da legenda
-            let legendHtml = '<div class="mt-4 p-3 bg-gray-100 rounded-lg"><h4 class="font-semibold mb-2">Legenda - Representantes:</h4>';
-
-            stateRepresentatives.forEach(repName => {
-                const color = getRepresentativeColor(repName);
-                legendHtml += `
-                <div class="flex items-center mb-1">
-                    <div class="w-4 h-4 rounded mr-2" style="background-color: ${color};"></div>
-                    <span class="text-sm">${repName}</span>
-                </div>
-            `;
-            });
-
-            legendHtml += '<div class="flex items-center mb-1"><div class="w-4 h-4 rounded mr-2 border-2 border-dashed border-gray-400" style="background-color: #CCCCCC;"></div><span class="text-sm">Múltiplos representantes</span></div>';
-            legendHtml += '</div>';
-
-            // Adicionar legenda ao container de resultados
-            const legendContainer = document.createElement('div');
-            legendContainer.innerHTML = legendHtml;
-            legendContainer.id = 'color-legend';
-
-            // Remover legenda anterior se existir
-            const existingLegend = document.getElementById('color-legend');
-            if (existingLegend) {
-                existingLegend.remove();
-            }
-
-            resultsContainer.appendChild(legendContainer);
-        }
-
-        // --- ATUALIZAR onEachMunicipioFeature ---
-
-        function onEachMunicipioFeature(feature, layer) {
-            const props = feature.properties;
-            const municipioName = props.nome || props.name || props.municipio;
-            const normalizedName = normalize(municipioName);
-            const representatives = municipioRepresentativeMap.get(normalizedName) || [];
-
-            layer.on({
-                mouseover: e => {
-                    if (e.target !== selectedMunicipioLayer) {
-                        e.target.setStyle(municipioHighlightStyle);
-                    }
-                },
-                mouseout: e => {
-                    if (e.target !== selectedMunicipioLayer) {
-                        municipiosLayer.resetStyle(e.target);
-                    }
-                },
-                click: e => {
-                    if (selectedMunicipioLayer) {
-                        municipiosLayer.resetStyle(selectedMunicipioLayer);
-                    }
-
-                    selectedMunicipioLayer = e.target;
-                    selectedMunicipioLayer.setStyle(municipioSelectedStyle);
-
-                    filterByMunicipio(municipioName);
-                }
-            });
-
-            // REMOVER ESTAS LINHAS:
-            // let tooltipText = municipioName;
-            // if (representatives.length > 0) {
-            //     tooltipText += `\n\nRepresentantes:\n${representatives.map(r => r.nome).join('\n')}`;
-            // } else {
-            //     tooltipText += '\n\nSem representante';
-            // }
-            // 
-            // layer.bindTooltip(tooltipText, {
-            //     permanent: false,
-            //     direction: 'center',
-            //     className: 'municipio-tooltip'
-            // });
-        }
     </script>
-
 </body>
 
 </html>

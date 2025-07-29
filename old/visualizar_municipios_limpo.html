@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Municípios Limpos do Brasil</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            margin: 0;
+            color: #333;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            min-width: 150px;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #4CAF50;
+            margin: 0;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .map-container {
+            height: 70vh;
+            margin: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .leaflet-popup-content {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .popup-header {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        
+        .popup-section {
+            margin: 10px 0;
+        }
+        
+        .popup-label {
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2em;
+            color: #666;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 50px;
+            color: #d32f2f;
+            font-size: 1.1em;
+        }
+        
+        .success {
+            text-align: center;
+            padding: 20px;
+            color: #4CAF50;
+            font-size: 1.1em;
+            background: rgba(76, 175, 80, 0.1);
+            border-radius: 8px;
+            margin: 20px;
+        }
+        
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        .legend h4 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🗺️ Teste - Municípios Limpos do Brasil</h1>
+        <div class="subtitle">Usando dados não corrompidos do GitHub</div>
+        
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number" id="total-municipios">-</div>
+                <div class="stat-label">Municípios Carregados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="status-arquivo">✅</div>
+                <div class="stat-label">Status do Arquivo</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="map-container">
+        <div id="map"></div>
+        <div class="legend">
+            <h4>Legenda</h4>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #2196F3;"></div>
+                <span>Municípios de Exemplo</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #4CAF50;"></div>
+                <span>Dados Limpos (sem corrupção)</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        let map;
+        let municipiosLayer;
+        
+        // Inicializar mapa
+        function initMap() {
+            map = L.map('map').setView([-14.2350, -51.9253], 4);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+        }
+        
+        // Carregar dados dos municípios
+        async function loadMunicipios() {
+            try {
+                console.log('Carregando dados dos municípios...');
+                
+                const response = await fetch('brasil-municipios-exemplo.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                console.log('Dados carregados:', data);
+                
+                // Verificar se é um GeoJSON válido
+                if (!data.type || data.type !== 'FeatureCollection' || !data.features) {
+                    throw new Error('Formato GeoJSON inválido');
+                }
+                
+                displayMunicipios(data);
+                updateStats(data);
+                
+                // Mostrar mensagem de sucesso
+                const successDiv = document.createElement('div');
+                successDiv.className = 'success';
+                successDiv.innerHTML = '✅ Arquivo carregado com sucesso! Dados não corrompidos.';
+                document.body.insertBefore(successDiv, document.querySelector('.map-container'));
+                
+            } catch (error) {
+                console.error('Erro ao carregar dados:', error);
+                document.getElementById('map').innerHTML = 
+                    `<div class="error">❌ Erro ao carregar dados dos municípios.<br>Erro: ${error.message}<br>Verifique se o arquivo brasil-municipios-exemplo.json existe.</div>`;
+                
+                document.getElementById('status-arquivo').textContent = '❌';
+                document.getElementById('status-arquivo').style.color = '#f44336';
+            }
+        }
+        
+        // Exibir municípios no mapa
+        function displayMunicipios(data) {
+            municipiosLayer = L.geoJSON(data, {
+                style: function(feature) {
+                    return {
+                        fillColor: '#2196F3',
+                        weight: 2,
+                        opacity: 1,
+                        color: 'white',
+                        dashArray: '3',
+                        fillOpacity: 0.7
+                    };
+                },
+                onEachFeature: function(feature, layer) {
+                    const props = feature.properties;
+                    
+                    let popupContent = `
+                        <div class="popup-header">
+                            ${props.name || 'Nome não disponível'}
+                        </div>
+                        
+                        <div class="popup-section">
+                            <span class="popup-label">🆔 ID:</span> ${props.id || 'N/A'}<br>
+                            <span class="popup-label">📍 UF/Município:</span> ${props.uf_municipio || 'N/A'}<br>
+                            <span class="popup-label">📝 Descrição:</span> ${props.description || 'N/A'}
+                        </div>
+                        
+                        <div class="popup-section">
+                            <span class="popup-label">🔧 Tipo de Geometria:</span> ${feature.geometry.type}<br>
+                            <span class="popup-label">📊 Status:</span> <span style="color: #4CAF50;">✅ Dados Limpos</span>
+                        </div>
+                    `;
+                    
+                    layer.bindPopup(popupContent, {
+                        maxWidth: 300,
+                        maxHeight: 400
+                    });
+                }
+            }).addTo(map);
+            
+            // Ajustar zoom para mostrar todos os municípios
+            if (municipiosLayer.getBounds().isValid()) {
+                map.fitBounds(municipiosLayer.getBounds(), { padding: [20, 20] });
+            }
+        }
+        
+        // Atualizar estatísticas
+        function updateStats(data) {
+            const totalMunicipios = data.features.length;
+            
+            document.getElementById('total-municipios').textContent = totalMunicipios;
+            document.getElementById('status-arquivo').textContent = '✅';
+            document.getElementById('status-arquivo').style.color = '#4CAF50';
+        }
+        
+        // Inicializar aplicação
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Inicializando aplicação...');
+            initMap();
+            loadMunicipios();
+        });
+    </script>
+</body>
+</html>

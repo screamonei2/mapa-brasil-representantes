@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Representantes - Versão Melhorada</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            margin: 0;
+            color: #333;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            min-width: 150px;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #4CAF50;
+            margin: 0;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .improvement {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+        }
+        
+        .improvement .stat-number {
+            color: white;
+        }
+        
+        .map-container {
+            height: 70vh;
+            margin: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .leaflet-popup-content {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .popup-header {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        
+        .popup-section {
+            margin: 10px 0;
+        }
+        
+        .popup-label {
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .city-list {
+            max-height: 150px;
+            overflow-y: auto;
+            background: #f9f9f9;
+            padding: 8px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        
+        .city-item {
+            padding: 2px 0;
+            font-size: 0.9em;
+        }
+        
+        .similarity-match {
+            background: #e8f5e8;
+            padding: 3px 6px;
+            border-radius: 3px;
+            margin: 2px 0;
+            font-size: 0.85em;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2em;
+            color: #666;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 50px;
+            color: #d32f2f;
+            font-size: 1.1em;
+        }
+        
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        .legend h4 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🗺️ Mapa de Representantes do Brasil</h1>
+        <div class="subtitle">Versão Melhorada com Algoritmo de Similaridade</div>
+        
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number" id="total-representantes">-</div>
+                <div class="stat-label">Representantes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="total-cidades">-</div>
+                <div class="stat-label">Cidades Processadas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="cidades-mapeadas">-</div>
+                <div class="stat-label">Cidades Mapeadas</div>
+            </div>
+            <div class="stat-card improvement">
+                <div class="stat-number" id="taxa-sucesso">-</div>
+                <div class="stat-label">Taxa de Sucesso</div>
+            </div>
+            <div class="stat-card improvement">
+                <div class="stat-number" id="matches-similaridade">-</div>
+                <div class="stat-label">Matches por Similaridade</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="map-container">
+        <div id="map"></div>
+        <div class="legend">
+            <h4>Legenda</h4>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #4CAF50;"></div>
+                <span>Representantes (99.4% sucesso)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #FF9800;"></div>
+                <span>Com matches por similaridade</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        let map;
+        let representantesLayer;
+        
+        // Inicializar mapa
+        function initMap() {
+            map = L.map('map').setView([-14.2350, -51.9253], 4);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+        }
+        
+        // Carregar dados dos representantes
+        async function loadRepresentantes() {
+            try {
+                const response = await fetch('representantes_geometrias_melhorado.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                
+                displayRepresentantes(data);
+                updateStats(data);
+                
+            } catch (error) {
+                console.error('Erro ao carregar dados:', error);
+                document.getElementById('map').innerHTML = 
+                    '<div class="error">❌ Erro ao carregar dados dos representantes.<br>Verifique se o arquivo representantes_geometrias_melhorado.json existe.</div>';
+            }
+        }
+        
+        // Exibir representantes no mapa
+        function displayRepresentantes(data) {
+            representantesLayer = L.geoJSON(data, {
+                style: function(feature) {
+                    const hasMatches = feature.properties.matches_por_similaridade && 
+                                     feature.properties.matches_por_similaridade.length > 0;
+                    
+                    return {
+                        fillColor: hasMatches ? '#FF9800' : '#4CAF50',
+                        weight: 2,
+                        opacity: 1,
+                        color: 'white',
+                        dashArray: '3',
+                        fillOpacity: 0.7
+                    };
+                },
+                onEachFeature: function(feature, layer) {
+                    const props = feature.properties;
+                    
+                    let popupContent = `
+                        <div class="popup-header">
+                            ${props.representante}
+                        </div>
+                        
+                        <div class="popup-section">
+                            <span class="popup-label">📧 Email:</span> ${props.email || 'Não informado'}<br>
+                            <span class="popup-label">📱 Celular:</span> ${props.celular || 'Não informado'}<br>
+                            <span class="popup-label">👤 Contato:</span> ${props.contato || 'Não informado'}
+                        </div>
+                        
+                        <div class="popup-section">
+                            <span class="popup-label">📊 Estatísticas:</span><br>
+                            • Total de cidades: ${props.total_cidades}<br>
+                            • Cidades encontradas: ${props.cidades_encontradas.length}<br>
+                            • Não encontradas: ${props.cidades_nao_encontradas.length}
+                    `;
+                    
+                    if (props.matches_por_similaridade && props.matches_por_similaridade.length > 0) {
+                        popupContent += `<br>• Matches por similaridade: ${props.matches_por_similaridade.length}`;
+                    }
+                    
+                    popupContent += '</div>';
+                    
+                    if (props.cidades_encontradas.length > 0) {
+                        popupContent += `
+                            <div class="popup-section">
+                                <span class="popup-label">🏙️ Cidades Atendidas:</span>
+                                <div class="city-list">
+                        `;
+                        
+                        props.cidades_encontradas.forEach(cidade => {
+                            popupContent += `<div class="city-item">• ${cidade}</div>`;
+                        });
+                        
+                        popupContent += '</div></div>';
+                    }
+                    
+                    if (props.matches_por_similaridade && props.matches_por_similaridade.length > 0) {
+                        popupContent += `
+                            <div class="popup-section">
+                                <span class="popup-label">🔍 Matches por Similaridade:</span>
+                                <div class="city-list">
+                        `;
+                        
+                        props.matches_por_similaridade.forEach(match => {
+                            popupContent += `
+                                <div class="similarity-match">
+                                    '${match.original}' → '${match.encontrada}' (${(match.score * 100).toFixed(1)}%)
+                                </div>
+                            `;
+                        });
+                        
+                        popupContent += '</div></div>';
+                    }
+                    
+                    if (props.cidades_nao_encontradas.length > 0) {
+                        popupContent += `
+                            <div class="popup-section">
+                                <span class="popup-label">❌ Cidades Não Encontradas:</span>
+                                <div class="city-list">
+                        `;
+                        
+                        props.cidades_nao_encontradas.forEach(cidade => {
+                            popupContent += `<div class="city-item">• ${cidade}</div>`;
+                        });
+                        
+                        popupContent += '</div></div>';
+                    }
+                    
+                    layer.bindPopup(popupContent, {
+                        maxWidth: 400,
+                        maxHeight: 500
+                    });
+                }
+            }).addTo(map);
+            
+            // Ajustar zoom para mostrar todos os representantes
+            if (representantesLayer.getBounds().isValid()) {
+                map.fitBounds(representantesLayer.getBounds(), { padding: [20, 20] });
+            }
+        }
+        
+        // Atualizar estatísticas
+        function updateStats(data) {
+            const features = data.features;
+            const totalRepresentantes = features.length;
+            
+            let totalCidades = 0;
+            let cidadesMapeadas = 0;
+            let totalMatches = 0;
+            
+            features.forEach(feature => {
+                const props = feature.properties;
+                totalCidades += props.total_cidades;
+                cidadesMapeadas += props.cidades_encontradas.length;
+                if (props.matches_por_similaridade) {
+                    totalMatches += props.matches_por_similaridade.length;
+                }
+            });
+            
+            const taxaSucesso = ((cidadesMapeadas / totalCidades) * 100).toFixed(1);
+            
+            document.getElementById('total-representantes').textContent = totalRepresentantes;
+            document.getElementById('total-cidades').textContent = totalCidades.toLocaleString();
+            document.getElementById('cidades-mapeadas').textContent = cidadesMapeadas.toLocaleString();
+            document.getElementById('taxa-sucesso').textContent = taxaSucesso + '%';
+            document.getElementById('matches-similaridade').textContent = totalMatches;
+        }
+        
+        // Inicializar aplicação
+        document.addEventListener('DOMContentLoaded', function() {
+            initMap();
+            loadRepresentantes();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+{
+  "total_matches": 41,
+  "matches": [
+    {
+      "cidade_original": "SAO MIGUEL D OESTE",
+      "cidade_encontrada": "São Miguel do Oeste",
+      "score": 0.972972972972973
+    },
+    {
+      "cidade_original": "SAO ROQUE DO CANNAA",
+      "cidade_encontrada": "São Roque do Canaã",
+      "score": 0.972972972972973
+    },
+    {
+      "cidade_original": "SANTA BARBARA D OESTE",
+      "cidade_encontrada": "Santa Bárbara d'Oeste",
+      "score": 0.9523809523809523
+    },
+    {
+      "cidade_original": "SANTA BARBARA D OESTE",
+      "cidade_encontrada": "Santa Bárbara d'Oeste",
+      "score": 0.9523809523809523
+    },
+    {
+      "cidade_original": "SANTA BARBARA D OESTE",
+      "cidade_encontrada": "Santa Bárbara d'Oeste",
+      "score": 0.9523809523809523
+    },
+    {
+      "cidade_original": "SANTA BARBARA D OESTE",
+      "cidade_encontrada": "Santa Bárbara d'Oeste",
+      "score": 0.9523809523809523
+    },
+    {
+      "cidade_original": "SANTA CLARA D OESTE",
+      "cidade_encontrada": "Santa Clara d'Oeste",
+      "score": 0.9473684210526315
+    },
+    {
+      "cidade_original": "ITAPEJARA D OESTE",
+      "cidade_encontrada": "Itapejara d'Oeste",
+      "score": 0.9411764705882353
+    },
+    {
+      "cidade_original": "PALMEIRA D OESTE",
+      "cidade_encontrada": "Palmeira d'Oeste",
+      "score": 0.9375
+    },
+    {
+      "cidade_original": "ESTRELA D OESTE",
+      "cidade_encontrada": "Estrela d'Oeste",
+      "score": 0.9333333333333333
+    },
+    {
+      "cidade_original": "PICARRAS",
+      "cidade_encontrada": "Piçarra",
+      "score": 0.9333333333333333
+    },
+    {
+      "cidade_original": "PICARRAS",
+      "cidade_encontrada": "Piçarra",
+      "score": 0.9333333333333333
+    },
+    {
+      "cidade_original": "HERVAL D OESTE",
+      "cidade_encontrada": "Herval d'Oeste",
+      "score": 0.9285714285714286
+    },
+    {
+      "cidade_original": "HERVAL D OESTE",
+      "cidade_encontrada": "Herval d'Oeste",
+      "score": 0.9285714285714286
+    },
+    {
+      "cidade_original": "JACARE",
+      "cidade_encontrada": "Jacareí",
+      "score": 0.9230769230769231
+    },
+    {
+      "cidade_original": "JACARE",
+      "cidade_encontrada": "Jacareí",
+      "score": 0.9230769230769231
+    },
+    {
+      "cidade_original": "TIMBUI",
+      "cidade_encontrada": "Timburi",
+      "score": 0.9230769230769231
+    },
+    {
+      "cidade_original": "DIAS D AVILA",
+      "cidade_encontrada": "Dias d'Ávila",
+      "score": 0.9166666666666666
+    },
+    {
+      "cidade_original": "SAO JOSE DO TURVO",
+      "cidade_encontrada": "São José do Ouro",
+      "score": 0.9090909090909091
+    },
+    {
+      "cidade_original": "MOGI MIRIM",
+      "cidade_encontrada": "Moji Mirim",
+      "score": 0.9
+    },
+    {
+      "cidade_original": "MOGI MIRIM",
+      "cidade_encontrada": "Moji Mirim",
+      "score": 0.9
+    },
+    {
+      "cidade_original": "MOGI MIRIM",
+      "cidade_encontrada": "Moji Mirim",
+      "score": 0.9
+    },
+    {
+      "cidade_original": "MORUNGAVA",
+      "cidade_encontrada": "Morungaba",
+      "score": 0.8888888888888888
+    },
+    {
+      "cidade_original": "BATAIPORA",
+      "cidade_encontrada": "Batayporã",
+      "score": 0.8888888888888888
+    },
+    {
+      "cidade_original": "PIRITUBA",
+      "cidade_encontrada": "Piratuba",
+      "score": 0.875
+    },
+    {
+      "cidade_original": "PARAPEUNA",
+      "cidade_encontrada": "Paraúna",
+      "score": 0.875
+    },
+    {
+      "cidade_original": "DORANDIA",
+      "cidade_encontrada": "Orlândia",
+      "score": 0.875
+    },
+    {
+      "cidade_original": "SAO SEBASTIAO DA VITORIA",
+      "cidade_encontrada": "São Sebastião da Amoreira",
+      "score": 0.8571428571428571
+    },
+    {
+      "cidade_original": "BONSUCESSO",
+      "cidade_encontrada": "Bom Sucesso",
+      "score": 0.8571428571428571
+    },
+    {
+      "cidade_original": "MURUCUPI",
+      "cidade_encontrada": "Uruçuí",
+      "score": 0.8571428571428571
+    },
+    {
+      "cidade_original": "CAMPOS ELYSEOS",
+      "cidade_encontrada": "Campos Belos",
+      "score": 0.8461538461538461
+    },
+    {
+      "cidade_original": "CEILANDIA",
+      "cidade_encontrada": "Acrelândia",
+      "score": 0.8421052631578947
+    },
+    {
+      "cidade_original": "SANTANESIA",
+      "cidade_encontrada": "Santana",
+      "score": 0.8235294117647058
+    },
+    {
+      "cidade_original": "GUAJUVIRA",
+      "cidade_encontrada": "Guaíra",
+      "score": 0.8
+    },
+    {
+      "cidade_original": "NUCLEO BANDEIRANTE",
+      "cidade_encontrada": "Nova Bandeirantes",
+      "score": 0.8
+    },
+    {
+      "cidade_original": "SAO CAETANO DO NAVIO",
+      "cidade_encontrada": "São Caetano do Sul",
+      "score": 0.7894736842105263
+    },
+    {
+      "cidade_original": "SANTO AGOSTINHO",
+      "cidade_encontrada": "Cabo de Santo Agostinho",
+      "score": 0.7894736842105263
+    },
+    {
+      "cidade_original": "RIACHO FUNDO",
+      "cidade_encontrada": "Riacho Frio",
+      "score": 0.782608695652174
+    },
+    {
+      "cidade_original": "CORREGO RICO",
+      "cidade_encontrada": "Córrego Novo",
+      "score": 0.75
+    },
+    {
+      "cidade_original": "VILA DE VOLTA GRANDE",
+      "cidade_encontrada": "Volta Grande",
+      "score": 0.75
+    },
+    {
+      "cidade_original": "GAMA",
+      "cidade_encontrada": "Fama",
+      "score": 0.75
+    }
+  ]
+}

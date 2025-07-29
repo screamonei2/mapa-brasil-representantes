@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador - GeoJS 100 Municípios v2</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            margin: 0;
+            color: #333;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            min-width: 150px;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #4CAF50;
+            margin: 0;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .loading {
+            background: #FFF3CD;
+            color: #856404;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px;
+            text-align: center;
+            border: 1px solid #FFEAA7;
+        }
+        
+        .map-container {
+            height: 70vh;
+            margin: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .leaflet-popup-content {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .popup-header {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        
+        .popup-section {
+            margin: 10px 0;
+        }
+        
+        .popup-label {
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 50px;
+            color: #d32f2f;
+            font-size: 1.1em;
+        }
+        
+        .success {
+            text-align: center;
+            padding: 20px;
+            color: #4CAF50;
+            font-size: 1.1em;
+            background: rgba(76, 175, 80, 0.1);
+            border-radius: 8px;
+            margin: 20px;
+        }
+        
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        .legend h4 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 3px;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #45a049);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🗺️ Visualizador GeoJS - 100 Municípios v2</h1>
+        <div class="subtitle">Dados completos dos municípios brasileiros</div>
+        
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number" id="total-municipios">-</div>
+                <div class="stat-label">Municípios Carregados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="arquivo-tamanho">58MB</div>
+                <div class="stat-label">Tamanho do Arquivo</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="status-carregamento">⏳</div>
+                <div class="stat-label">Status</div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="loading-section" class="loading">
+        ⏳ Carregando arquivo GeoJSON (58MB)... Isso pode levar alguns segundos.
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+    </div>
+    
+    <div class="map-container">
+        <div id="map"></div>
+        <div class="legend">
+            <h4>Legenda</h4>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #2196F3;"></div>
+                <span>Municípios Brasileiros</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #4CAF50;"></div>
+                <span>Dados GeoJS v2</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        let map;
+        let municipiosLayer;
+        
+        // Inicializar mapa
+        function initMap() {
+            map = L.map('map').setView([-14.2350, -51.9253], 4);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+        }
+        
+        // Simular progresso de carregamento
+        function simulateProgress() {
+            const progressFill = document.getElementById('progress-fill');
+            let progress = 0;
+            
+            const interval = setInterval(() => {
+                progress += Math.random() * 15;
+                if (progress > 90) progress = 90;
+                
+                progressFill.style.width = progress + '%';
+                
+                if (progress >= 90) {
+                    clearInterval(interval);
+                }
+            }, 200);
+        }
+        
+        // Carregar dados dos municípios
+        async function loadMunicipios() {
+            try {
+                console.log('Iniciando carregamento do arquivo GeoJSON...');
+                simulateProgress();
+                
+                const response = await fetch('geojs-100-mun-v2.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                console.log('Arquivo baixado, processando JSON...');
+                const data = await response.json();
+                
+                // Completar barra de progresso
+                document.getElementById('progress-fill').style.width = '100%';
+                
+                console.log('Dados processados:', data);
+                
+                // Verificar se é um GeoJSON válido
+                if (!data.type || data.type !== 'FeatureCollection' || !data.features) {
+                    throw new Error('Formato GeoJSON inválido');
+                }
+                
+                // Ocultar loading
+                document.getElementById('loading-section').style.display = 'none';
+                
+                displayMunicipios(data);
+                updateStats(data);
+                
+                // Mostrar mensagem de sucesso
+                const successDiv = document.createElement('div');
+                successDiv.className = 'success';
+                successDiv.innerHTML = `✅ Arquivo GeoJS carregado com sucesso! ${data.features.length} municípios processados.`;
+                document.body.insertBefore(successDiv, document.querySelector('.map-container'));
+                
+            } catch (error) {
+                console.error('Erro ao carregar dados:', error);
+                
+                document.getElementById('loading-section').style.display = 'none';
+                document.getElementById('map').innerHTML = 
+                    `<div class="error">❌ Erro ao carregar dados dos municípios.<br>Erro: ${error.message}<br>Verifique se o arquivo geojs-100-mun-v2.json existe na pasta old.</div>`;
+                
+                document.getElementById('status-carregamento').textContent = '❌';
+                document.getElementById('status-carregamento').style.color = '#f44336';
+            }
+        }
+        
+        // Exibir municípios no mapa
+        function displayMunicipios(data) {
+            console.log('Renderizando municípios no mapa...');
+            
+            municipiosLayer = L.geoJSON(data, {
+                style: function(feature) {
+                    return {
+                        fillColor: '#2196F3',
+                        weight: 1,
+                        opacity: 0.8,
+                        color: 'white',
+                        fillOpacity: 0.6
+                    };
+                },
+                onEachFeature: function(feature, layer) {
+                    const props = feature.properties;
+                    
+                    let popupContent = `
+                        <div class="popup-header">
+                            ${props.name || 'Nome não disponível'}
+                        </div>
+                        
+                        <div class="popup-section">
+                            <span class="popup-label">🆔 ID IBGE:</span> ${props.id || 'N/A'}<br>
+                            <span class="popup-label">📍 UF/Município:</span> ${props.uf_municipio || 'N/A'}<br>
+                            <span class="popup-label">📝 Descrição:</span> ${props.description || 'N/A'}
+                        </div>
+                        
+                        <div class="popup-section">
+                            <span class="popup-label">🔧 Tipo de Geometria:</span> ${feature.geometry.type}<br>
+                            <span class="popup-label">📊 Fonte:</span> <span style="color: #4CAF50;">GeoJS v2</span>
+                        </div>
+                    `;
+                    
+                    layer.bindPopup(popupContent, {
+                        maxWidth: 300,
+                        maxHeight: 400
+                    });
+                    
+                    // Highlight on hover
+                    layer.on({
+                        mouseover: function(e) {
+                            const layer = e.target;
+                            layer.setStyle({
+                                weight: 2,
+                                color: '#666',
+                                fillOpacity: 0.8
+                            });
+                        },
+                        mouseout: function(e) {
+                            municipiosLayer.resetStyle(e.target);
+                        }
+                    });
+                }
+            }).addTo(map);
+            
+            // Ajustar zoom para mostrar todos os municípios
+            if (municipiosLayer.getBounds().isValid()) {
+                map.fitBounds(municipiosLayer.getBounds(), { padding: [20, 20] });
+            }
+            
+            console.log('Municípios renderizados com sucesso!');
+        }
+        
+        // Atualizar estatísticas
+        function updateStats(data) {
+            const totalMunicipios = data.features.length;
+            
+            document.getElementById('total-municipios').textContent = totalMunicipios.toLocaleString();
+            document.getElementById('status-carregamento').textContent = '✅';
+            document.getElementById('status-carregamento').style.color = '#4CAF50';
+        }
+        
+        // Inicializar aplicação
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Inicializando aplicação...');
+            initMap();
+            loadMunicipios();
+        });
+    </script>
+</body>
+</html>
