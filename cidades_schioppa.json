@@ -1,0 +1,15 @@
+{
+  "estados": [
+    "SE",
+    "RR",
+    "RN",
+    "AL",
+    "RO",
+    "MA",
+    "AP",
+    "AC"
+  ],
+  "total_cidades": 0,
+  "cidades": [],
+  "municipios_por_estado": {}
+}
