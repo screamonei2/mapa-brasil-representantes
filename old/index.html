@@ -621,13 +621,10 @@
 
             // --- ESTILOS DO MAPA ---
 
-            const defaultMapStyle = { fillColor: "#3b82f6", weight: 1, opacity: 1, color: 'white', fillOpacity: 0.7 };
-            const highlightMapStyle = { weight: 3, color: '#fbbf24', fillOpacity: 0.9 };
+            const defaultMapStyle = { fillColor: "#3b82f6", weight: 0, opacity: 1, color: 'white', fillOpacity: 0.7 };
+            const highlightMapStyle = { weight: 0, color: '#fbbf24', fillOpacity: 0.9 };
             const selectedMapStyle = { fillColor: "#fbbf24", fillOpacity: 1 };
-            const municipioStyle = { fillColor: "#fbbf24", weight: 1, opacity: 1, color: 'white', fillOpacity: 0.6 };
-            const municipioHighlightStyle = { weight: 2, color: '#f59e0b', fillOpacity: 0.8 };
-            const municipioSelectedStyle = { fillColor: "#f59e0b", fillOpacity: 1 };
-            
+
             // Função para obter estilo do município baseado no representante
             function getMunicipioStyleByRepresentative(municipioName) {
                 const normalizedName = normalize(municipioName);
@@ -637,7 +634,7 @@
                     // Município sem representante - cor cinza
                     return {
                         fillColor: "#9CA3AF",
-                        weight: 1,
+                        weight: 0,
                         opacity: 1,
                         color: 'white',
                         fillOpacity: 0.6
@@ -650,7 +647,7 @@
                 
                 return {
                     fillColor: color,
-                    weight: 1,
+                    weight: 0,
                     opacity: 1,
                     color: 'white',
                     fillOpacity: representatives.length > 1 ? 0.8 : 0.6 // Mais opaco se múltiplos representantes
@@ -663,14 +660,14 @@
                 const representatives = municipioRepresentativeMap.get(normalizedName) || [];
                 
                 if (representatives.length === 0) {
-                    return { weight: 2, color: '#6B7280', fillOpacity: 0.8 };
+                    return { weight: 0, color: '#6B7280', fillOpacity: 0.8 };
                 }
                 
                 const primaryRepresentative = representatives[0];
                 const color = representativeColorMap.get(primaryRepresentative.id) || '#6B7280';
                 
                 return {
-                    weight: 2,
+                    weight: 0,
                     color: color,
                     fillOpacity: 0.9
                 };
