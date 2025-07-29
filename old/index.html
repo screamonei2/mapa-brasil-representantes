@@ -19,17 +19,166 @@
     <style>
         body,
         html {
-            height: 100%;
+            height: 100vh;
             margin: 0;
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        #representantes-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .grid-container {
+            flex: 1;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 1fr;
+            min-height: 0;
+        }
+
+        @media (min-width: 1024px) {
+            .grid-container {
+                grid-template-columns: 3fr 2fr;
+                gap: 2rem;
+            }
+        }
+
+        .map-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+        }
+
+        .map-wrapper {
+            flex: 1;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+            padding: 1rem;
+            position: relative;
+            min-height: 300px;
         }
 
         #map {
-            height: 500px;
+            height: 100%;
             width: 100%;
             border-radius: 0.5rem;
             background-color: #fff;
+            min-height: 300px;
+        }
+
+        @media (min-width: 768px) {
+            #map {
+                min-height: 400px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            #map {
+                min-height: calc(100vh - 200px);
+            }
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+        }
+
+        .sidebar-content {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .results-container {
+            flex: 1;
+            overflow-y: auto;
+            min-height: 200px;
+            max-height: 400px;
+        }
+
+        @media (min-width: 1024px) {
+            .results-container {
+                max-height: calc(100vh - 300px);
+            }
+        }
+
+        @media (max-height: 600px) {
+            .results-container {
+                max-height: 250px;
+            }
+            
+            #map {
+                min-height: 250px;
+            }
+        }
+
+        /* Melhorias para dispositivos móveis muito pequenos */
+        @media (max-width: 480px) {
+            #representantes-container {
+                padding: 0.5rem;
+            }
+            
+            .main-content {
+                gap: 0.5rem;
+            }
+            
+            .map-wrapper {
+                padding: 0.5rem;
+            }
+            
+            .sidebar-content {
+                padding: 1rem;
+            }
+            
+            .results-container {
+                max-height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) and (max-height: 700px) {
+            #map {
+                min-height: 200px;
+            }
+            
+            .results-container {
+                max-height: 200px;
+            }
+        }
+
+        /* Ajustes para orientação landscape em dispositivos móveis */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .grid-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.5rem;
+            }
+            
+            #map {
+                min-height: 200px;
+            }
+            
+            .results-container {
+                max-height: 200px;
+            }
+            
+            #representantes-container {
+                padding: 0.5rem;
+            }
         }
 
         .leaflet-interactive {
@@ -97,43 +246,45 @@
 
 <body class="bg-gray-50">
 
-    <div id="representantes-container" class="container mx-auto p-4 md:p-8 max-w-7xl">
+    <div id="representantes-container" class="container mx-auto p-2 sm:p-4 lg:p-6 max-w-7xl">
 
-        <div class="mb-8">
-            <h1 id="main-title" class="text-2xl md:text-3xl font-bold text-gray-800">Escolha sua região para encontrar
+        <div class="mb-4 lg:mb-6">
+            <h1 id="main-title" class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800">Escolha sua região para encontrar
                 representantes</h1>
             <button id="back-to-brazil" class="hidden text-blue-600 font-semibold mt-2 hover:underline">&lt; VOLTAR PARA
                 O MAPA DO BRASIL</button>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+        <div class="main-content">
+            <div class="grid-container">
 
-            <!-- Coluna do Mapa -->
-            <div
-                class="lg:col-span-3 bg-white p-4 sm:p-6 rounded-lg shadow-md flex items-center justify-center relative">
-                <div id="map"></div>
-                <button id="reset-zoom-btn" class="reset-zoom-btn" title="Resetar zoom">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Coluna de Busca e Resultados -->
-            <div class="lg:col-span-2">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-xl font-bold text-gray-800 mb-4">SEUS REPRESENTANTES</h2>
-
-                    <div class="mb-6">
-                        <input type="text" id="search-input" placeholder="Digite o nome, estado ou cidade"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                <!-- Coluna do Mapa -->
+                <div class="map-container">
+                    <div class="map-wrapper">
+                        <div id="map"></div>
+                        <button id="reset-zoom-btn" class="reset-zoom-btn" title="Resetar zoom">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                            </svg>
+                        </button>
                     </div>
+                </div>
 
-                    <div id="results-container" class="space-y-4 h-[450px] overflow-y-auto pr-2">
+                <!-- Coluna de Busca e Resultados -->
+                <div class="sidebar">
+                    <div class="sidebar-content">
+                        <h2 class="text-lg sm:text-xl font-bold text-gray-800 mb-4">SEUS REPRESENTANTES</h2>
+
+                        <div class="mb-4">
+                            <input type="text" id="search-input" placeholder="Digite o nome, estado ou cidade"
+                                class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition text-sm sm:text-base">
+                        </div>
+
+                        <div id="results-container" class="results-container space-y-3 pr-2">
                         <div id="initial-message" class="text-center py-16">
                             <div id="loading-indicator">
                                 <svg class="animate-spin mx-auto h-12 w-12 text-blue-600"
@@ -155,6 +306,18 @@
                                 <p class="mt-4 text-sm text-gray-500">Use a busca ou clique em um estado no mapa.</p>
                             </div>
                         </div>
+                        
+                        <!-- Legenda de Representantes -->
+                        <div id="legend" class="legend hidden mt-4 p-3 bg-white rounded-lg border border-gray-200">
+                            <h3 class="text-sm font-semibold text-gray-700 mb-2">Legenda de Cores</h3>
+                            <div id="legend-items" class="space-y-1 max-h-32 overflow-y-auto"></div>
+                            <div class="mt-2 pt-2 border-t border-gray-200">
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-3 h-3 rounded-full bg-gray-400 mr-2"></div>
+                                    <span>Sem representante</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -164,11 +327,11 @@
     <script>
         document.addEventListener('DOMContentLoaded', async function () {
             // --- CONFIGURAÇÃO ---
-            const jsonFileUrl = 'https://raw.githubusercontent.com/screamonei2/mapa-brasil-representantes/main/representantes.json';
-            const municipiosJsonUrl = 'https://raw.githubusercontent.com/screamonei2/mapa-brasil-representantes/main/municipios.json';
+            const jsonFileUrl = './representantes.json';
+            const municipiosJsonUrl = './municipios.json';
 
             // URL do GeoJSON dos estados do Brasil
-            const brazilStatesGeoJsonUrl = 'https://raw.githubusercontent.com/fititnt/gis-dataset-brasil/master/uf/geojson/uf.json';
+            const brazilStatesGeoJsonUrl = './uf.json';
 
             // --- VARIÁVEIS GLOBAIS ---
             let representativesData = [];
@@ -181,6 +344,18 @@
             let selectedMunicipioLayer = null;
             let currentState = null;
             let viewMode = 'states'; // 'states' ou 'municipios'
+            let municipioRepresentativeMap = new Map(); // Mapa município -> representantes
+            let representativeColorMap = new Map(); // Mapa representante -> cor
+            
+            // Paleta de cores para representantes
+            const representativeColors = [
+                '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7',
+                '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9',
+                '#F8C471', '#82E0AA', '#F1948A', '#85C1E9', '#D7BDE2',
+                '#A3E4D7', '#F9E79F', '#D5A6BD', '#AED6F1', '#A9DFBF',
+                '#FAD7A0', '#D2B4DE', '#AED6F1', '#A9CCE3', '#D5DBDB',
+                '#FADBD8', '#D6EAF8', '#D1F2EB', '#FCF3CF', '#EBDEF0'
+            ];
 
             const searchInput = document.getElementById('search-input');
             const resultsContainer = document.getElementById('results-container');
@@ -195,6 +370,7 @@
             function transformRepresentativesData(rawData) {
                 const representativesMap = new Map();
                 const locationMap = new Map();
+                let colorIndex = 0;
 
                 const stateToAbbrev = {
                     'SAO PAULO': 'SP', 'RIO DE JANEIRO': 'RJ', 'MINAS GERAIS': 'MG', 'BAHIA': 'BA',
@@ -226,16 +402,30 @@
 
                         representativesMap.set(representante.id, representante);
 
+                        // Atribuir cor ao representante
+                        if (!representativeColorMap.has(representante.id)) {
+                            representativeColorMap.set(representante.id, representativeColors[colorIndex % representativeColors.length]);
+                            colorIndex++;
+                        }
+
                         // Indexar por estado
                         [estado, siglaEstado].forEach(key => {
                             if (!locationMap.has(key)) locationMap.set(key, new Set());
                             locationMap.get(key).add(representante.id);
                         });
 
-                        // Indexar por cada cidade
+                        // Indexar por cada cidade e criar mapeamento município-representante
                         cidades_atendidas.forEach(cidade => {
+                            const normalizedCidade = normalize(cidade);
+                            
                             if (!locationMap.has(cidade)) locationMap.set(cidade, new Set());
                             locationMap.get(cidade).add(representante.id);
+                            
+                            // Mapear município para representante
+                            if (!municipioRepresentativeMap.has(normalizedCidade)) {
+                                municipioRepresentativeMap.set(normalizedCidade, []);
+                            }
+                            municipioRepresentativeMap.get(normalizedCidade).push(representante);
                         });
                     }
                 }
@@ -345,6 +535,84 @@
             const municipioStyle = { fillColor: "#fbbf24", weight: 1, opacity: 1, color: 'white', fillOpacity: 0.6 };
             const municipioHighlightStyle = { weight: 2, color: '#f59e0b', fillOpacity: 0.8 };
             const municipioSelectedStyle = { fillColor: "#f59e0b", fillOpacity: 1 };
+            
+            // Função para obter estilo do município baseado no representante
+            function getMunicipioStyleByRepresentative(municipioName) {
+                const normalizedName = normalize(municipioName);
+                const representatives = municipioRepresentativeMap.get(normalizedName) || [];
+                
+                if (representatives.length === 0) {
+                    // Município sem representante - cor cinza
+                    return {
+                        fillColor: "#9CA3AF",
+                        weight: 1,
+                        opacity: 1,
+                        color: 'white',
+                        fillOpacity: 0.6
+                    };
+                }
+                
+                // Se há múltiplos representantes, usar a cor do primeiro
+                const primaryRepresentative = representatives[0];
+                const color = representativeColorMap.get(primaryRepresentative.id) || '#9CA3AF';
+                
+                return {
+                    fillColor: color,
+                    weight: 1,
+                    opacity: 1,
+                    color: 'white',
+                    fillOpacity: representatives.length > 1 ? 0.8 : 0.6 // Mais opaco se múltiplos representantes
+                };
+            }
+            
+            // Função para obter estilo de destaque do município
+            function getMunicipioHighlightStyle(municipioName) {
+                const normalizedName = normalize(municipioName);
+                const representatives = municipioRepresentativeMap.get(normalizedName) || [];
+                
+                if (representatives.length === 0) {
+                    return { weight: 2, color: '#6B7280', fillOpacity: 0.8 };
+                }
+                
+                const primaryRepresentative = representatives[0];
+                const color = representativeColorMap.get(primaryRepresentative.id) || '#6B7280';
+                
+                return {
+                    weight: 2,
+                    color: color,
+                    fillOpacity: 0.9
+                };
+            }
+            
+            // Função para criar/atualizar a legenda
+            function updateLegend(stateRepresentatives = []) {
+                const legendElement = document.getElementById('legend');
+                const legendItemsElement = document.getElementById('legend-items');
+                
+                if (!legendElement || !legendItemsElement) return;
+                
+                // Limpar itens existentes
+                legendItemsElement.innerHTML = '';
+                
+                if (stateRepresentatives.length === 0) {
+                    legendElement.classList.add('hidden');
+                    return;
+                }
+                
+                // Criar itens da legenda
+                stateRepresentatives.forEach(rep => {
+                    const color = representativeColorMap.get(rep.id) || '#9CA3AF';
+                    const legendItem = document.createElement('div');
+                    legendItem.className = 'flex items-center text-xs text-gray-700';
+                    legendItem.innerHTML = `
+                        <div class="w-3 h-3 rounded-full mr-2" style="background-color: ${color};"></div>
+                        <span class="truncate" title="${rep.NomeRepresentante}">${rep.NomeRepresentante}</span>
+                    `;
+                    legendItemsElement.appendChild(legendItem);
+                });
+                
+                legendElement.classList.remove('hidden');
+            }
 
             // --- FUNÇÕES DO MAPA DE ESTADOS ---
 
@@ -434,9 +702,12 @@
                     map.removeLayer(municipiosLayer);
                 }
 
-                // Criar layer dos municípios
+                // Criar layer dos municípios com cores por representante
                 municipiosLayer = L.geoJson(estadoMunicipios, {
-                    style: municipioStyle,
+                    style: feature => {
+                        const municipioName = feature.properties.nome || feature.properties.name || feature.properties.municipio;
+                        return getMunicipioStyleByRepresentative(municipioName);
+                    },
                     onEachFeature: onEachMunicipioFeature
                 }).addTo(map);
 
@@ -456,6 +727,13 @@
                 } else {
                     map.fitBounds(stateLayer.getBounds(), { padding: [10, 10] });
                 }
+
+                // Obter representantes do estado e atualizar legenda
+                const stateRepresentatives = representativesData.filter(rep => 
+                    rep.SiglaEstado === stateCode || 
+                    normalize(rep.Estado) === normalize(stateName || stateCode)
+                );
+                updateLegend(stateRepresentatives);
 
                 viewMode = 'municipios';
                 mainTitle.textContent = `Municípios de ${stateName || stateCode} - Clique em um município`;
@@ -550,7 +828,7 @@
                 layer.on({
                     mouseover: e => {
                         if (e.target !== selectedMunicipioLayer) {
-                            e.target.setStyle(municipioHighlightStyle);
+                            e.target.setStyle(getMunicipioHighlightStyle(municipioName));
                         }
                     },
                     mouseout: e => {
@@ -570,6 +848,27 @@
                     }
                 });
 
+                // Tooltip com informações do município e representantes
+                let tooltipContent = `<strong>${municipioName}</strong>`;
+                if (representatives.length > 0) {
+                    tooltipContent += `<br><small>Representantes: ${representatives.length}</small>`;
+                    representatives.slice(0, 2).forEach(rep => {
+                        const color = representativeColorMap.get(rep.id) || '#9CA3AF';
+                        tooltipContent += `<br><span style="color: ${color}; font-weight: bold;">•</span> ${rep.NomeRepresentante}`;
+                    });
+                    if (representatives.length > 2) {
+                        tooltipContent += `<br>... e mais ${representatives.length - 2}`;
+                    }
+                } else {
+                    tooltipContent += `<br><small style="color: #6B7280;">Sem representante</small>`;
+                }
+
+                layer.bindTooltip(tooltipContent, {
+                    permanent: false,
+                    direction: 'top',
+                    className: 'municipio-tooltip'
+                });
+
                 // REMOVER ESTAS LINHAS:
                 // layer.bindTooltip(municipioName, {
                 //     permanent: false,
@@ -579,8 +878,14 @@
             }
 
             function filterByMunicipio(municipioName) {
-                const results = getRepresentativesByLocation(municipioName);
-                renderResults(results, municipioName);
+                // Usar o mapeamento normalizado para buscar representantes
+                const normalizedName = normalize(municipioName);
+                const representatives = municipioRepresentativeMap.get(normalizedName) || [];
+                
+                console.log('Buscando representantes para:', municipioName, 'normalizado:', normalizedName);
+                console.log('Representantes encontrados:', representatives.length);
+                
+                renderResults(representatives, municipioName);
                 mainTitle.textContent = `Representantes em ${municipioName}`;
                 document.getElementById('results-container').scrollIntoView({ behavior: 'smooth' });
             }
@@ -776,6 +1081,9 @@
                 backButton.classList.add('hidden');
                 mainTitle.textContent = 'Escolha sua região para encontrar representantes';
 
+                // Esconder legenda
+                updateLegend([]);
+                
                 // Remove legenda de cores se existir
                 const existingLegend = document.getElementById('color-legend');
                 if (existingLegend) {

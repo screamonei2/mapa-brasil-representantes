@@ -28,8 +28,8 @@ class BrazilMap {
         try {
             const [representativesResponse, statesResponse, municipalitiesResponse] = await Promise.all([
                 fetch('./representantes.json'),
-                fetch('https://raw.githubusercontent.com/fititnt/gis-dataset-brasil/master/uf/geojson/uf.json'),
-                fetch('https://raw.githubusercontent.com/fititnt/gis-dataset-brasil/master/municipio/geojson/municipio.json')
+                fetch('./uf.json'),
+                fetch('./municipios.json')
             ]);
             
             if (!representativesResponse.ok || !statesResponse.ok || !municipalitiesResponse.ok) {
