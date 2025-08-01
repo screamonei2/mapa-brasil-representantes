@@ -9,7 +9,7 @@
         "celular": "14-99712-4471"
       },
       "observacoes": "Será enviado para pesquisa no mapa",
-      "total_cidades": 87,
+      "total_cidades": 79,
       "estados_atendidos": [
         "SP   "
       ],
@@ -21,7 +21,6 @@
             "ADAMANTINA",
             "AGUAI",
             "AGUDOS",
-            "ALTINOPOLIS",
             "ALVARES MACHADO",
             "ARARAQUARA",
             "AREALVA",
@@ -35,7 +34,6 @@
             "BORACEIA",
             "CAFELANDIA",
             "CANDIDO MOTA",
-            "CANITAR",
             "CHAVANTES",
             "CONCHAS",
             "CORUMBATAI",
@@ -49,7 +47,6 @@
             "IACRI",
             "IGARACU DO TIETE",
             "INUBIA PAULISTA",
-            "ITAPEVA",
             "ITAPUI",
             "ITATINGA",
             "JAU",
@@ -61,9 +58,7 @@
             "MARILIA",
             "MATAO",
             "MINEIROS DO TIETE",
-            "MIRACATU",
             "MIRANTE DO PARANAPANEMA",
-            "MONTE APRAZIVEL",
             "NOVA CANAA PAULISTA",
             "ORIENTE",
             "OSVALDO CRUZ",
@@ -73,7 +68,6 @@
             "PARAGUACU PAULISTA",
             "PARANAPANEMA",
             "PARAPUA",
-            "PAULICEIA",
             "PEDERNEIRAS",
             "PEDRINHAS PAULISTA",
             "PEREIRAS",
@@ -83,13 +77,11 @@
             "PIRAPOZINHO",
             "PIRATININGA",
             "POMPEIA",
-            "PORANGABA",
             "PRATANIA",
             "PRESIDENTE EPITACIO",
             "PRESIDENTE PRUDENTE",
             "PRESIDENTE VENCESLAU",
             "PROMISSAO",
-            "QUADRA",
             "QUATA",
             "QUEIROZ",
             "QUINTANA",
@@ -106,7 +98,7 @@
             "VARGEM GRANDE DO SUL",
             "VARZEA PAULISTA"
           ],
-          "total_cidades": 87
+          "total_cidades": 79
         }
       }
     },
@@ -1508,7 +1500,7 @@
         "celular": "11-99854-5868"
       },
       "observacoes": "Será enviado para pesquisa no mapa",
-      "total_cidades": 19,
+      "total_cidades": 10,
       "estados_atendidos": [
         "SP   "
       ],
@@ -1519,25 +1511,16 @@
           "cidades": [
             "ALTAIR",
             "ALVINLANDIA",
-            "BENTO DE ABREU",
-            "ELISIARIO",
-            "FARTURA",
             "IPORANGA",
             "ITARIRI",
-            "LARANJAL PAULISTA",
             "PONGAI",
             "RUBIACEA",
-            "RUBINEIA",
-            "SAGRES",
-            "SALTO GRANDE",
             "SAO JOAO DAS DUAS PONTES",
             "SAO PAULO",
-            "TAIACU",
             "TIMBURI",
-            "TORRINHA",
             "VARGEM"
           ],
-          "total_cidades": 19
+          "total_cidades": 10
         }
       }
     },
@@ -1550,7 +1533,7 @@
         "celular": "16-99211-6497"
       },
       "observacoes": "Será enviado para pesquisa no mapa",
-      "total_cidades": 69,
+      "total_cidades": 60,
       "estados_atendidos": [
         "SP   "
       ],
@@ -1565,8 +1548,6 @@
             "BARRINHA",
             "BATATAIS",
             "BRODOWSKI",
-            "CACHOEIRA PAULISTA",
-            "CACONDE",
             "CAJURU",
             "CASSIA DOS COQUEIROS",
             "COLINA",
@@ -1577,7 +1558,6 @@
             "FRANCA",
             "GUAIMBE",
             "GUAIRA",
-            "GUAPIARA",
             "GUARA",
             "GUARIBA",
             "GUZOLANDIA",
@@ -1585,7 +1565,6 @@
             "IBITINGA",
             "IGARAPAVA",
             "IGUAPE",
-            "ITAPEVI",
             "ITUVERAVA",
             "JABOTICABAL",
             "JARDINOPOLIS",
@@ -1603,14 +1582,12 @@
             "PIRAPOZINHO",
             "PITANGUEIRAS",
             "PONTAL",
-            "POPULINA",
             "PRADOPOLIS",
             "RIBEIRAO CORRENTE",
             "RIBEIRAO PRETO",
             "RIFAINA",
             "RIVERSUL",
             "SALES OLIVEIRA",
-            "SANDOVALINA",
             "SANTA CRUZ DAS PALMEIRAS",
             "SANTA ERNESTINA",
             "SANTA RITA DO PASSA QUATRO",
@@ -1619,17 +1596,14 @@
             "SERRANA",
             "SERTAOZINHO",
             "SEVERINIA",
-            "TABATINGA",
-            "TACIBA",
             "TAMBAU",
             "TEODORO SAMPAIO",
             "TRABIJU",
-            "UBARANA",
             "UBIRAJARA",
             "UCHOA",
             "URU"
           ],
-          "total_cidades": 69
+          "total_cidades": 60
         }
       }
     },
@@ -1889,7 +1863,7 @@
         "celular": "19-99745-8059 / 19-3845-5011"
       },
       "observacoes": "Será enviado para pesquisa no mapa",
-      "total_cidades": 38,
+      "total_cidades": 30,
       "estados_atendidos": [
         "SP   "
       ],
@@ -1901,25 +1875,21 @@
             "AGUAS DE LINDOIA",
             "AMPARO",
             "AREIAS",
-            "BARAO DE ANTONINA",
             "CAJAMAR",
             "CAMPINAS",
             "CAPIVARI",
             "DOLCINOPOLIS",
             "HOLAMBRA",
             "HORTOLANDIA",
-            "IBIRAREMA",
             "INDAIATUBA",
             "ITATIBA",
             "JAGUARIUNA",
             "JARINU",
-            "JOAO RAMALHO",
             "LINDOIA",
             "LOUVEIRA",
             "MESOPOLIS",
             "MONTE MOR",
             "OCAUCU",
-            "PANORAMA",
             "PARISI",
             "PAULINIA",
             "PEDREIRA",
@@ -1927,17 +1897,13 @@
             "REGINOPOLIS",
             "RIO DAS PEDRAS",
             "SANTO ANTONIO DE POSSE",
-            "SANTOPOLIS DO AGUAPEI",
-            "SAO JOSE DO BARREIRO",
             "SERRA NEGRA",
             "SOCORRO",
             "SUMARE",
-            "SUZANAPOLIS",
-            "TURMALINA",
             "VALINHOS",
             "VINHEDO"
           ],
-          "total_cidades": 38
+          "total_cidades": 30
         }
       }
     },
@@ -1950,7 +1916,7 @@
         "celular": "11-99919-6284"
       },
       "observacoes": "Será enviado para pesquisa no mapa",
-      "total_cidades": 21,
+      "total_cidades": 12,
       "estados_atendidos": [
         "SP   "
       ],
@@ -1959,29 +1925,20 @@
       "estados": {
         "SP": {
           "cidades": [
-            "AMERICO DE CAMPOS",
-            "AURIFLAMA",
             "BARRA DO CHAPEU",
             "DIADEMA",
-            "DIVINOLANDIA",
-            "FLORINIA",
-            "ILHABELA",
             "INDIANA",
             "ITABERA",
             "ITAPURA",
-            "MACAUBAL",
             "MARTINOPOLIS",
             "QUELUZ",
-            "RIBEIRA",
-            "SALTINHO",
             "SANTO ANDRE",
             "SANTO ANTONIO DO JARDIM",
             "SANTO ANTONIO DO PINHAL",
             "SAO BERNARDO DO CAMPO",
-            "TEJUPA",
             "URUPES"
           ],
-          "total_cidades": 21
+          "total_cidades": 12
         }
       }
     },
@@ -2249,7 +2206,7 @@
         "celular": "11-99602-9181"
       },
       "observacoes": "Será enviado para pesquisa no mapa",
-      "total_cidades": 21,
+      "total_cidades": 13,
       "estados_atendidos": [
         "SP   "
       ],
@@ -2262,25 +2219,17 @@
             "ARUJA",
             "BIRITIBA-MIRIM",
             "BORBOREMA",
-            "BOREBI",
-            "BURITIZAL",
             "ECHAPORA",
-            "GASTAO VIDIGAL",
             "GUARULHOS",
             "ITAQUAQUECETUBA",
             "MOGI DAS CRUZES",
             "NIPOA",
-            "NOVA CASTILHO",
-            "ONDA VERDE",
             "PALMARES PAULISTA",
-            "PIQUETE",
-            "RESTINGA",
             "RIBEIRAO GRANDE",
-            "SANTA CRUZ DA CONCEICAO",
             "SAO JOAQUIM DA BARRA",
             "TAGUAI"
           ],
-          "total_cidades": 21
+          "total_cidades": 13
         }
       }
     },
@@ -3271,6 +3220,42 @@
             "XAMBRE"
           ],
           "total_cidades": 292
+        }
+      }
+    },
+    "lm prime representacao cml ltda": {
+      "codigo": "7.01",
+      "nome": "LM PRIME REPRESENTAÇÃO CML LTDA",
+      "contato": {
+        "nome_contato": "Marcos",
+        "email": "marcosferresilva@gmail.com",
+        "celular": "11-99161-4740"
+      },
+      "observacoes": "Será enviado para pesquisa no mapa",
+      "total_cidades": 13,
+      "estados_atendidos": [
+        "SP   "
+      ],
+      "resumo_atividades": "",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "cidades": [
+            "AGUAS DA PRATA",
+            "ALTO ALEGRE",
+            "BERTIOGA",
+            "CAIEIRAS",
+            "CAMPOS NOVOS PAULISTA",
+            "FRANCISCO MORATO",
+            "FRANCO DA ROCHA",
+            "MARABA PAULISTA",
+            "PEREIRA BARRETO",
+            "PRESIDENTE ALVES",
+            "SAO PAULO",
+            "SEBASTIANOPOLIS DO SUL",
+            "TAPIRAI"
+          ],
+          "total_cidades": 13
         }
       }
     },
@@ -4592,7 +4577,7 @@
         "celular": "17-981346-600 / 17-3022-8004"
       },
       "observacoes": "Será enviado para pesquisa no mapa",
-      "total_cidades": 105,
+      "total_cidades": 97,
       "estados_atendidos": [
         "SP   "
       ],
@@ -4604,7 +4589,6 @@
             "ALVARES FLORENCE",
             "ALVARES MACHADO",
             "ANDRADINA",
-            "ANHUMAS",
             "ARACATUBA",
             "ARANDU",
             "ARAPEI",
@@ -4618,20 +4602,16 @@
             "BURI",
             "BURITAMA",
             "CAJOBI",
-            "CAMPINA DO MONTE ALEGRE",
             "CASTILHO",
             "CATANDUVA",
-            "CATIGUA",
             "CEDRAL",
             "CLEMENTINA",
             "COLINA",
             "COROADOS",
             "CORONEL MACEDO",
             "COSMORAMA",
-            "CRUZALIA",
             "DIRCE REIS",
             "ESTRELA D'OESTE",
-            "EUCLIDES DA CUNHA PAULISTA",
             "FERNANDOPOLIS",
             "GENERAL SALGADO",
             "GUAPIACU",
@@ -4644,13 +4624,11 @@
             "IRAPUA",
             "ITAJOBI",
             "ITAPOLIS",
-            "ITOBI",
             "JABORANDI",
             "JACI",
             "JALES",
             "JOSE BONIFACIO",
             "JUNQUEIROPOLIS",
-            "LUCIANOPOLIS",
             "LUIZIANIA",
             "MACEDONIA",
             "MAGDA",
@@ -4658,7 +4636,6 @@
             "MENDONCA",
             "MIRANDOPOLIS",
             "MIRASSOL",
-            "MIRASSOLANDIA",
             "MONCOES",
             "MONTE ALTO",
             "MONTE AZUL PAULISTA",
@@ -4707,7 +4684,7 @@
             "VIRADOURO",
             "VOTUPORANGA"
           ],
-          "total_cidades": 105
+          "total_cidades": 97
         }
       }
     },
@@ -4927,7 +4904,7 @@
         "celular": "19-3413-9265 / 19-3413-0776 / 19-99782-5276"
       },
       "observacoes": "Será enviado para pesquisa no mapa",
-      "total_cidades": 51,
+      "total_cidades": 43,
       "estados_atendidos": [
         "SP   "
       ],
@@ -4941,10 +4918,8 @@
             "AMERICO BRASILIENSE",
             "ANALANDIA",
             "ARCO-IRIS",
-            "ASPASIA",
             "BARIRI",
             "BARRA BONITA",
-            "BOM SUCESSO DE ITARARE",
             "BROTAS",
             "CANDIDO RODRIGUES",
             "CHARQUEADA",
@@ -4957,10 +4932,7 @@
             "ENGENHEIRO COELHO",
             "ESTIVA GERBI",
             "FERNAO",
-            "FERRAZ DE VASCONCELOS",
-            "IARAS",
             "IGARACU DO TIETE",
-            "IGARATA",
             "IPEUNA",
             "IRACEMAPOLIS",
             "ITAJU",
@@ -4968,14 +4940,11 @@
             "ITIRAPINA",
             "LIMEIRA",
             "LOUVEIRA",
-            "MOJI MIRIM",
             "MONTE MOR",
             "MORUNGABA",
             "NANTES",
             "NOVA EUROPA",
             "NOVA ODESSA",
-            "ORINDIUVA",
-            "OURO VERDE",
             "PEDRO DE TOLEDO",
             "PIRACICABA",
             "PORTO FERREIRA",
@@ -4988,7 +4957,7 @@
             "SAO CARLOS",
             "SAO PEDRO"
           ],
-          "total_cidades": 51
+          "total_cidades": 43
         }
       }
     },
@@ -5131,7 +5100,7 @@
         "celular": "13-9977-65694"
       },
       "observacoes": "Será enviado para pesquisa no mapa",
-      "total_cidades": 26,
+      "total_cidades": 18,
       "estados_atendidos": [
         "SP   "
       ],
@@ -5143,31 +5112,23 @@
             "BARRA DO TURVO",
             "CAJATI",
             "CUBATAO",
-            "DUARTINA",
             "ITANHAEM",
-            "ITAPIRAPUA PAULISTA",
             "JACUPIRANGA",
             "LUPERCIO",
             "MANDURI",
             "MONGAGUA",
             "MURUTINGA DO SUL",
-            "PARIQUERA-ACU",
             "PERUIBE",
             "PRAIA GRANDE",
             "REGISTRO",
-            "SALES",
-            "SALESOPOLIS",
-            "SALMOURAO",
-            "SANTA CRUZ DO RIO PARDO",
             "SANTOS",
             "SAO JOSE DA BELA VISTA",
             "SAO SEBASTIAO DA GRAMA",
             "SAO VICENTE",
             "SILVEIRAS",
-            "TORRE DE PEDRA",
             "VITORIA BRASIL"
           ],
-          "total_cidades": 26
+          "total_cidades": 18
         }
       }
     },
@@ -10823,7 +10784,7 @@
         "celular": "19-99823-1904"
       },
       "observacoes": "Será enviado para pesquisa no mapa",
-      "total_cidades": 28,
+      "total_cidades": 20,
       "estados_atendidos": [
         "SP   "
       ],
@@ -10832,36 +10793,28 @@
       "estados": {
         "SP": {
           "cidades": [
-            "ALVARO DE CARVALHO",
             "ARARAS",
             "ARTUR NOGUEIRA",
             "BRAUNA",
             "BREJO ALEGRE",
             "CASA BRANCA",
-            "CONCHAL",
             "ENGENHEIRO COELHO",
             "ESPIRITO SANTO DO PINHAL",
-            "GABRIEL MONTEIRO",
             "INDIAPORA",
-            "IPAUSSU",
             "ITAPIRA",
             "LEME",
             "LUTECIA",
             "MOCOCA",
             "MOGI GUACU",
-            "MONTEIRO LOBATO",
             "OSCAR BRESSANE",
             "PIRASSUNUNGA",
             "PLATINA",
-            "SABINO",
             "SANTA LUCIA",
             "SANTANA DA PONTE PENSA",
             "SAO JOAO DA BOA VISTA",
-            "SAO JOAO DO PAU D'ALHO",
-            "SAO JOSE DO RIO PARDO",
-            "URANIA"
+            "SAO JOSE DO RIO PARDO"
           ],
-          "total_cidades": 28
+          "total_cidades": 20
         }
       }
     },
@@ -10874,7 +10827,7 @@
         "celular": "11-99730-4953"
       },
       "observacoes": "Será enviado para pesquisa no mapa",
-      "total_cidades": 19,
+      "total_cidades": 10,
       "estados_atendidos": [
         "SP   "
       ],
@@ -10883,27 +10836,18 @@
       "estados": {
         "SP": {
           "cidades": [
-            "AGUAS DE SANTA BARBARA",
             "CARDOSO",
-            "ELDORADO",
-            "FLORIDA PAULISTA",
             "GUAICARA",
             "LAVINIA",
             "LOURDES",
-            "MIRA ESTRELA",
-            "NARANDIBA",
-            "NOVA GUATAPORANGA",
-            "PIQUEROBI",
             "PRESIDENTE BERNARDES",
             "SANTA CRUZ DA ESPERANCA",
-            "SANTA SALETE",
             "SANTO EXPEDITO",
             "SAO JOAO DE IRACEMA",
             "SAO PAULO",
-            "TURIUBA",
             "ZACARIAS"
           ],
-          "total_cidades": 19
+          "total_cidades": 10
         }
       }
     },
@@ -11205,6 +11149,143 @@
       "performance": {},
       "estados": {}
     },
+    "dsj representacao comercial ltda 1": {
+      "codigo": "02.02",
+      "nome": "DSJ REPRESENTACAO COMERCIAL LTDA",
+      "contato": {
+        "nome_contato": "Dionisio",
+        "email": "dionisiops@gmail.com",
+        "celular": "11-99854-5868"
+      },
+      "observacoes": "Será enviado para pesquisa no mapa",
+      "total_cidades": 10,
+      "estados_atendidos": [
+        "SP   "
+      ],
+      "resumo_atividades": "",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "cidades": [
+            "BENTO DE ABREU",
+            "ELISIARIO",
+            "FARTURA",
+            "LARANJAL PAULISTA",
+            "RUBINEIA",
+            "SAGRES",
+            "SALTO GRANDE",
+            "SAO PAULO",
+            "TAIACU",
+            "TORRINHA"
+          ],
+          "total_cidades": 10
+        }
+      }
+    },
+    "gilangio intermediao de servios ltda": {
+      "codigo": "03",
+      "nome": "GIL-ANGIO INTERMEDIAÇÃO DE SERVIÇOS LTDA",
+      "contato": {
+        "nome_contato": "Gilberto",
+        "email": "gilschioppa@uol.com.br",
+        "celular": "11-99919-6284"
+      },
+      "observacoes": "Será enviado para pesquisa no mapa",
+      "total_cidades": 12,
+      "estados_atendidos": [
+        "SP   "
+      ],
+      "resumo_atividades": "",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "cidades": [
+            "AMERICO DE CAMPOS",
+            "AURIFLAMA",
+            "DIADEMA",
+            "DIVINOLANDIA",
+            "FLORINIA",
+            "ILHABELA",
+            "MACAUBAL",
+            "RIBEIRA",
+            "SALTINHO",
+            "SANTO ANDRE",
+            "SAO BERNARDO DO CAMPO",
+            "TEJUPA"
+          ],
+          "total_cidades": 12
+        }
+      }
+    },
+    "gl representao comercial ltda": {
+      "codigo": "04",
+      "nome": "GL - REPRESENTAÇÃO COMERCIAL LTDA",
+      "contato": {
+        "nome_contato": "Ideraldo",
+        "email": "Ideraldo.leal@gmail.com",
+        "celular": "11-99602-9181"
+      },
+      "observacoes": "Será enviado para pesquisa no mapa",
+      "total_cidades": 13,
+      "estados_atendidos": [
+        "SP   "
+      ],
+      "resumo_atividades": "",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "cidades": [
+            "ARUJA",
+            "BIRITIBA-MIRIM",
+            "BOREBI",
+            "BURITIZAL",
+            "GASTAO VIDIGAL",
+            "GUARULHOS",
+            "ITAQUAQUECETUBA",
+            "MOGI DAS CRUZES",
+            "NOVA CASTILHO",
+            "ONDA VERDE",
+            "PIQUETE",
+            "RESTINGA",
+            "SANTA CRUZ DA CONCEICAO"
+          ],
+          "total_cidades": 13
+        }
+      }
+    },
+    "vb representao comercial sc ltda": {
+      "codigo": "05",
+      "nome": "V&B REPRESENTAÇÃO COMERCIAL S/C LTDA",
+      "contato": {
+        "nome_contato": "Ricardo",
+        "email": "ricardobodo@outlook.com",
+        "celular": "11-99730-4953"
+      },
+      "observacoes": "Será enviado para pesquisa no mapa",
+      "total_cidades": 10,
+      "estados_atendidos": [
+        "SP   "
+      ],
+      "resumo_atividades": "",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "cidades": [
+            "AGUAS DE SANTA BARBARA",
+            "ELDORADO",
+            "FLORIDA PAULISTA",
+            "MIRA ESTRELA",
+            "NARANDIBA",
+            "NOVA GUATAPORANGA",
+            "PIQUEROBI",
+            "SANTA SALETE",
+            "SAO PAULO",
+            "TURIUBA"
+          ],
+          "total_cidades": 10
+        }
+      }
+    },
     "celso garcia filho solues comerciais ltda": {
       "codigo": "06.02",
       "nome": "CELSO GARCIA FILHO SOLUÇÕES COMERCIAIS LTDA",
@@ -11248,7 +11329,7 @@
         "celular": "11-99161-4740"
       },
       "observacoes": "Será enviado para pesquisa no mapa",
-      "total_cidades": 22,
+      "total_cidades": 13,
       "estados_atendidos": [
         "SP   "
       ],
@@ -11257,30 +11338,21 @@
       "estados": {
         "SP": {
           "cidades": [
-            "AGUAS DA PRATA",
-            "ALTO ALEGRE",
             "ARIRANHA",
-            "BERTIOGA",
             "CAIEIRAS",
-            "CAMPOS NOVOS PAULISTA",
             "CANANEIA",
             "FLOREAL",
             "FRANCISCO MORATO",
             "FRANCO DA ROCHA",
             "IRAPURU",
             "LAVRINHAS",
-            "MARABA PAULISTA",
             "PAULISTANIA",
-            "PEREIRA BARRETO",
-            "PRESIDENTE ALVES",
             "RIBEIRAO BRANCO",
             "SAO PAULO",
-            "SEBASTIANOPOLIS DO SUL",
-            "TAPIRAI",
             "VERA CRUZ",
             "VISTA ALEGRE DO ALTO"
           ],
-          "total_cidades": 22
+          "total_cidades": 13
         }
       }
     },
@@ -11321,6 +11393,515 @@
             "VARGEM GRANDE PAULISTA"
           ],
           "total_cidades": 17
+        }
+      }
+    },
+    "rpgn representaes de mad e ferr ltda": {
+      "codigo": "12",
+      "nome": "RPGN REPRESENTAÇÕES DE MAD E FERR LTDA",
+      "contato": {
+        "nome_contato": "Ricardo",
+        "email": "rpgneves@hotmail.com",
+        "celular": "13-9977-65694"
+      },
+      "observacoes": "Será enviado para pesquisa no mapa",
+      "total_cidades": 18,
+      "estados_atendidos": [
+        "SP   "
+      ],
+      "resumo_atividades": "",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "cidades": [
+            "CAJATI",
+            "CUBATAO",
+            "DUARTINA",
+            "ITANHAEM",
+            "ITAPIRAPUA PAULISTA",
+            "JACUPIRANGA",
+            "MONGAGUA",
+            "PARIQUERA-ACU",
+            "PERUIBE",
+            "PRAIA GRANDE",
+            "REGISTRO",
+            "SALES",
+            "SALESOPOLIS",
+            "SALMOURAO",
+            "SANTA CRUZ DO RIO PARDO",
+            "SANTOS",
+            "SAO VICENTE",
+            "TORRE DE PEDRA"
+          ],
+          "total_cidades": 18
+        }
+      }
+    },
+    "gentil e gentil representaes ltdame": {
+      "codigo": "24",
+      "nome": "GENTIL E GENTIL REPRESENTAÇÕES LTDA-ME",
+      "contato": {
+        "nome_contato": "Claudio",
+        "email": "gentil-rep@uol.com.br",
+        "celular": "19-99745-8059 / 19-3845-5011"
+      },
+      "observacoes": "Será enviado para pesquisa no mapa",
+      "total_cidades": 30,
+      "estados_atendidos": [
+        "SP   "
+      ],
+      "resumo_atividades": "",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "cidades": [
+            "AGUAS DE LINDOIA",
+            "AMPARO",
+            "BARAO DE ANTONINA",
+            "CAMPINAS",
+            "CAPIVARI",
+            "HOLAMBRA",
+            "HORTOLANDIA",
+            "IBIRAREMA",
+            "INDAIATUBA",
+            "ITATIBA",
+            "JAGUARIUNA",
+            "JARINU",
+            "JOAO RAMALHO",
+            "LINDOIA",
+            "LOUVEIRA",
+            "MONTE MOR",
+            "PANORAMA",
+            "PAULINIA",
+            "PEDREIRA",
+            "RIO DAS PEDRAS",
+            "SANTO ANTONIO DE POSSE",
+            "SANTOPOLIS DO AGUAPEI",
+            "SAO JOSE DO BARREIRO",
+            "SERRA NEGRA",
+            "SOCORRO",
+            "SUMARE",
+            "SUZANAPOLIS",
+            "TURMALINA",
+            "VALINHOS",
+            "VINHEDO"
+          ],
+          "total_cidades": 30
+        }
+      }
+    },
+    "fernando guerrera junior me": {
+      "codigo": "25",
+      "nome": "FERNANDO GUERRERA JUNIOR - ME",
+      "contato": {
+        "nome_contato": "Fernando",
+        "email": "guerrera_j@hotmail.com",
+        "celular": "16-99211-6497"
+      },
+      "observacoes": "Será enviado para pesquisa no mapa",
+      "total_cidades": 61,
+      "estados_atendidos": [
+        "SP   "
+      ],
+      "resumo_atividades": "",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "cidades": [
+            "AMERICO BRASILIENSE",
+            "BARRINHA",
+            "BATATAIS",
+            "BRODOWSKI",
+            "CACHOEIRA PAULISTA",
+            "CACONDE",
+            "CAJURU",
+            "CASSIA DOS COQUEIROS",
+            "COLINA",
+            "CRAVINHOS",
+            "CRISTAIS PAULISTA",
+            "DOURADO",
+            "DUMONT",
+            "FRANCA",
+            "GUAIRA",
+            "GUAPIARA",
+            "GUARA",
+            "GUARIBA",
+            "IBATE",
+            "IBITINGA",
+            "IGARAPAVA",
+            "ITAPEVI",
+            "ITUVERAVA",
+            "JABOTICABAL",
+            "JARDINOPOLIS",
+            "LUIS ANTONIO",
+            "MERIDIANO",
+            "MONTE ALTO",
+            "MONTE AZUL PAULISTA",
+            "MORRO AGUDO",
+            "MOTUCA",
+            "NUPORANGA",
+            "ORLANDIA",
+            "PATROCINIO PAULISTA",
+            "PAULO DE FARIA",
+            "PEDREGULHO",
+            "PIRAPOZINHO",
+            "PITANGUEIRAS",
+            "PONTAL",
+            "POPULINA",
+            "PRADOPOLIS",
+            "RIBEIRAO CORRENTE",
+            "RIBEIRAO PRETO",
+            "RIFAINA",
+            "SALES OLIVEIRA",
+            "SANDOVALINA",
+            "SANTA CRUZ DAS PALMEIRAS",
+            "SANTA ERNESTINA",
+            "SANTA RITA DO PASSA QUATRO",
+            "SANTA ROSA DE VITERBO",
+            "SAO SIMAO",
+            "SERRANA",
+            "SERTAOZINHO",
+            "SEVERINIA",
+            "TABATINGA",
+            "TACIBA",
+            "TAMBAU",
+            "TEODORO SAMPAIO",
+            "TRABIJU",
+            "UBARANA",
+            "UCHOA"
+          ],
+          "total_cidades": 61
+        }
+      }
+    },
+    "roberto da fonseca reisreis repltda": {
+      "codigo": "26",
+      "nome": "ROBERTO DA FONSECA REIS&REIS REP.LTDA",
+      "contato": {
+        "nome_contato": "Roberto",
+        "email": "ROBERTORODAS1@HOTMAIL.COM",
+        "celular": "17-981346-600 / 17-3022-8004"
+      },
+      "observacoes": "Será enviado para pesquisa no mapa",
+      "total_cidades": 97,
+      "estados_atendidos": [
+        "SP   "
+      ],
+      "resumo_atividades": "",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "cidades": [
+            "ALVARES FLORENCE",
+            "ALVARES MACHADO",
+            "ANDRADINA",
+            "ANHUMAS",
+            "ARACATUBA",
+            "BADY BASSITT",
+            "BALSAMO",
+            "BARRETOS",
+            "BEBEDOURO",
+            "BILAC",
+            "BIRIGUI",
+            "BURI",
+            "BURITAMA",
+            "CAJOBI",
+            "CAMPINA DO MONTE ALEGRE",
+            "CASTILHO",
+            "CATANDUVA",
+            "CATIGUA",
+            "CEDRAL",
+            "CLEMENTINA",
+            "COLINA",
+            "COROADOS",
+            "COSMORAMA",
+            "CRUZALIA",
+            "ESTRELA D'OESTE",
+            "EUCLIDES DA CUNHA PAULISTA",
+            "FERNANDOPOLIS",
+            "GENERAL SALGADO",
+            "GUAPIACU",
+            "GUARACAI",
+            "GUARARAPES",
+            "IBIRA",
+            "ILHA SOLTEIRA",
+            "IPIGUA",
+            "IPUA",
+            "IRAPUA",
+            "ITAJOBI",
+            "ITAPOLIS",
+            "ITOBI",
+            "JABORANDI",
+            "JACI",
+            "JALES",
+            "JOSE BONIFACIO",
+            "JUNQUEIROPOLIS",
+            "LUCIANOPOLIS",
+            "LUIZIANIA",
+            "MAGDA",
+            "MARAPOAMA",
+            "MENDONCA",
+            "MIRANDOPOLIS",
+            "MIRASSOL",
+            "MIRASSOLANDIA",
+            "MONCOES",
+            "MONTE ALTO",
+            "MONTE AZUL PAULISTA",
+            "MORRO AGUDO",
+            "NEVES PAULISTA",
+            "NHANDEARA",
+            "NOVA ALIANCA",
+            "NOVA GRANADA",
+            "NOVAIS",
+            "NOVO HORIZONTE",
+            "OLIMPIA",
+            "OUROESTE",
+            "PALESTINA",
+            "PALMEIRA D'OESTE",
+            "PARAGUACU PAULISTA",
+            "PARANAPUA",
+            "PARAPUA",
+            "PAULO DE FARIA",
+            "PEDRANOPOLIS",
+            "PENAPOLIS",
+            "PINDORAMA",
+            "PIRANGI",
+            "PIRAPOZINHO",
+            "POLONI",
+            "PONTES GESTAL",
+            "POTIRENDABA",
+            "PRACINHA",
+            "PROMISSAO",
+            "ROSANA",
+            "SANTA ADELIA",
+            "SANTA CLARA D'OESTE",
+            "SANTA FE DO SUL",
+            "SANTO ANASTACIO",
+            "SAO JOSE DO RIO PRETO",
+            "SERRA AZUL",
+            "SUD MENNUCCI",
+            "TABAPUA",
+            "TANABI",
+            "TAQUARAL",
+            "TAQUARITINGA",
+            "TRES FRONTEIRAS",
+            "VALENTIM GENTIL",
+            "VALPARAISO",
+            "VIRADOURO",
+            "VOTUPORANGA"
+          ],
+          "total_cidades": 97
+        }
+      }
+    },
+    "3l representacoes comerciais ltda me 1": {
+      "codigo": "30",
+      "nome": "3L REPRESENTACOES COMERCIAIS LTDA ME",
+      "contato": {
+        "nome_contato": "Cristian",
+        "email": "vendasgentil@hotmail.com",
+        "celular": "14-99712-4471"
+      },
+      "observacoes": "Será enviado para pesquisa no mapa",
+      "total_cidades": 79,
+      "estados_atendidos": [
+        "SP   "
+      ],
+      "resumo_atividades": "",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "cidades": [
+            "ADAMANTINA",
+            "AGUDOS",
+            "ALTINOPOLIS",
+            "ALVARES MACHADO",
+            "ARARAQUARA",
+            "AREALVA",
+            "AREIOPOLIS",
+            "ASSIS",
+            "AVAI",
+            "BARIRI",
+            "BASTOS",
+            "BAURU",
+            "BOCAINA",
+            "BORACEIA",
+            "CAFELANDIA",
+            "CANDIDO MOTA",
+            "CANITAR",
+            "CHAVANTES",
+            "CONCHAS",
+            "DRACENA",
+            "GARCA",
+            "GAVIAO PEIXOTO",
+            "GUARANTA",
+            "GUATAPARA",
+            "HERCULANDIA",
+            "IACANGA",
+            "IACRI",
+            "IGARACU DO TIETE",
+            "INUBIA PAULISTA",
+            "ITAPEVA",
+            "ITAPUI",
+            "ITATINGA",
+            "JAU",
+            "JUNQUEIROPOLIS",
+            "LENCOIS PAULISTA",
+            "LINS",
+            "LUCELIA",
+            "MACATUBA",
+            "MARILIA",
+            "MATAO",
+            "MINEIROS DO TIETE",
+            "MIRACATU",
+            "MIRANTE DO PARANAPANEMA",
+            "MONTE APRAZIVEL",
+            "ORIENTE",
+            "OSVALDO CRUZ",
+            "OURINHOS",
+            "PACAEMBU",
+            "PALMITAL",
+            "PARAGUACU PAULISTA",
+            "PARANAPANEMA",
+            "PARAPUA",
+            "PAULICEIA",
+            "PEDERNEIRAS",
+            "PEDRINHAS PAULISTA",
+            "PEREIRAS",
+            "PINHALZINHO",
+            "PIRAJU",
+            "PIRAJUI",
+            "PIRAPOZINHO",
+            "PIRATININGA",
+            "POMPEIA",
+            "PORANGABA",
+            "PRATANIA",
+            "PRESIDENTE EPITACIO",
+            "PRESIDENTE PRUDENTE",
+            "PRESIDENTE VENCESLAU",
+            "PROMISSAO",
+            "QUADRA",
+            "QUATA",
+            "QUEIROZ",
+            "QUINTANA",
+            "RANCHARIA",
+            "REGENTE FEIJO",
+            "RIBEIRAO DOS INDIOS",
+            "RINOPOLIS",
+            "TAQUARITUBA",
+            "TARUMA",
+            "TUPA"
+          ],
+          "total_cidades": 79
+        }
+      }
+    },
+    "rodifer representaes ltda": {
+      "codigo": "38",
+      "nome": "RODIFER REPRESENTAÇÕES LTDA",
+      "contato": {
+        "nome_contato": "Orides",
+        "email": "erica@rodifer.com.br",
+        "celular": "19-3413-9265 / 19-3413-0776 / 19-99782-5276"
+      },
+      "observacoes": "Será enviado para pesquisa no mapa",
+      "total_cidades": 43,
+      "estados_atendidos": [
+        "SP   "
+      ],
+      "resumo_atividades": "",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "cidades": [
+            "AGUAS DE SAO PEDRO",
+            "AMERICANA",
+            "AMERICO BRASILIENSE",
+            "ANALANDIA",
+            "ASPASIA",
+            "BARIRI",
+            "BARRA BONITA",
+            "BOM SUCESSO DE ITARARE",
+            "BROTAS",
+            "CHARQUEADA",
+            "CORDEIROPOLIS",
+            "COSMOPOLIS",
+            "DESCALVADO",
+            "DOIS CORREGOS",
+            "ELIAS FAUSTO",
+            "ENGENHEIRO COELHO",
+            "ESTIVA GERBI",
+            "FERRAZ DE VASCONCELOS",
+            "IARAS",
+            "IGARACU DO TIETE",
+            "IGARATA",
+            "IPEUNA",
+            "IRACEMAPOLIS",
+            "ITAJU",
+            "ITAPUI",
+            "ITIRAPINA",
+            "LIMEIRA",
+            "LOUVEIRA",
+            "MOJI MIRIM",
+            "MONTE MOR",
+            "MORUNGABA",
+            "NOVA EUROPA",
+            "NOVA ODESSA",
+            "ORINDIUVA",
+            "OURO VERDE",
+            "PIRACICABA",
+            "RIO CLARO",
+            "SANTA BARBARA D'OESTE",
+            "SANTA CRUZ DAS PALMEIRAS",
+            "SANTA GERTRUDES",
+            "SANTA MARIA DA SERRA",
+            "SAO CARLOS",
+            "SAO PEDRO"
+          ],
+          "total_cidades": 43
+        }
+      }
+    },
+    "ts sasse representaes comerciais ltda": {
+      "codigo": "39",
+      "nome": "TS SASSE REPRESENTAÇÕES COMERCIAIS LTDA",
+      "contato": {
+        "nome_contato": "Tiago",
+        "email": "sasse.representacao@gmail.com",
+        "celular": "19-99823-1904"
+      },
+      "observacoes": "Será enviado para pesquisa no mapa",
+      "total_cidades": 20,
+      "estados_atendidos": [
+        "SP   "
+      ],
+      "resumo_atividades": "",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "cidades": [
+            "ALVARO DE CARVALHO",
+            "ARARAS",
+            "ARTUR NOGUEIRA",
+            "CASA BRANCA",
+            "CONCHAL",
+            "ENGENHEIRO COELHO",
+            "ESPIRITO SANTO DO PINHAL",
+            "GABRIEL MONTEIRO",
+            "IPAUSSU",
+            "ITAPIRA",
+            "LEME",
+            "MOCOCA",
+            "MOGI GUACU",
+            "MONTEIRO LOBATO",
+            "PIRASSUNUNGA",
+            "SABINO",
+            "SAO JOAO DA BOA VISTA",
+            "SAO JOAO DO PAU D'ALHO",
+            "SAO JOSE DO RIO PARDO",
+            "URANIA"
+          ],
+          "total_cidades": 20
         }
       }
     }
