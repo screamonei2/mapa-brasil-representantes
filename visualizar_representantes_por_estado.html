@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Representantes - Por Estado</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            margin: 0;
+            color: #333;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            min-width: 150px;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #4CAF50;
+            margin: 0;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .improvement {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+        }
+        
+        .improvement .stat-number {
+            color: white;
+        }
+        
+        .map-container {
+            height: 70vh;
+            margin: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .leaflet-popup-content {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .popup-header {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        
+        .popup-section {
+            margin: 10px 0;
+        }
+        
+        .popup-section h4 {
+            color: #4CAF50;
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        
+        .popup-cities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+            margin-top: 5px;
+        }
+        
+        .popup-city {
+            background: #f0f8ff;
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-size: 0.8em;
+            border: 1px solid #ddd;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: white;
+            font-size: 1.2em;
+        }
+        
+        .error {
+            background: #ffebee;
+            color: #c62828;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .legend {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 20px;
+        }
+        
+        .legend h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Mapa de Representantes</h1>
+        <div class="subtitle">Visualização por Estado - Cidades Organizadas Hierarquicamente</div>
+    </div>
+    
+    <div class="stats-container">
+        <div class="stat-card">
+            <div class="stat-number" id="total-representantes">-</div>
+            <div class="stat-label">Representantes</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="total-estados">-</div>
+            <div class="stat-label">Estados</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="total-cidades">-</div>
+            <div class="stat-label">Cidades</div>
+        </div>
+        <div class="stat-card improvement">
+            <div class="stat-number" id="cobertura">-</div>
+            <div class="stat-label">Cobertura Nacional</div>
+        </div>
+    </div>
+    
+    <div class="legend">
+        <h3>Legenda</h3>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #4CAF50;"></div>
+            <span>Representante Ativo</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #FF9800;"></div>
+            <span>Múltiplos Representantes</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #2196F3;"></div>
+            <span>Estado com Cobertura</span>
+        </div>
+    </div>
+    
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
+    
+    <div id="loading" class="loading">
+        Carregando dados dos representantes...
+    </div>
+    
+    <div id="error" class="error" style="display: none;">
+        Erro ao carregar os dados. Verifique se o arquivo representantes_por_estado.json está disponível.
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Variáveis globais
+        let map;
+        let representantesData;
+        let municipiosData;
+        let markers = [];
+        
+        // Cores para diferentes tipos de marcadores
+        const colors = {
+            single: '#4CAF50',
+            multiple: '#FF9800',
+            state: '#2196F3'
+        };
+        
+        // Inicializar mapa
+        function initMap() {
+            map = L.map('map').setView([-15.7801, -47.9292], 5);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+        }
+        
+        // Carregar dados dos representantes
+        async function loadRepresentantes() {
+            try {
+                const response = await fetch('old/representantes_por_estado.json');
+                representantesData = await response.json();
+                return true;
+            } catch (error) {
+                console.error('Erro ao carregar representantes:', error);
+                return false;
+            }
+        }
+        
+        // Carregar dados dos municípios
+        async function loadMunicipios() {
+            try {
+                const response = await fetch('municipios.json');
+                municipiosData = await response.json();
+                return true;
+            } catch (error) {
+                console.error('Erro ao carregar municípios:', error);
+                return false;
+            }
+        }
+        
+        // Criar marcador para uma cidade
+        function createCityMarker(cidade, representante, estado) {
+            // Buscar coordenadas da cidade
+            const municipio = municipiosData.municipios.find(m => 
+                m.nome.toUpperCase() === cidade.toUpperCase() && 
+                m.estado.toUpperCase() === estado.toUpperCase()
+            );
+            
+            if (!municipio) {
+                console.warn(`Município não encontrado: ${cidade} - ${estado}`);
+                return null;
+            }
+            
+            const marker = L.circleMarker([municipio.lat, municipio.lng], {
+                radius: 8,
+                fillColor: colors.single,
+                color: '#fff',
+                weight: 2,
+                opacity: 1,
+                fillOpacity: 0.8
+            });
+            
+            // Criar popup com informações do representante
+            const popupContent = createPopupContent(representante, cidade, estado);
+            marker.bindPopup(popupContent);
+            
+            return marker;
+        }
+        
+        // Criar conteúdo do popup
+        function createPopupContent(representante, cidade, estado) {
+            let content = `
+                <div class="popup-header">${representante.nome}</div>
+                <div class="popup-section">
+                    <strong>Código:</strong> ${representante.codigo}<br>
+                    <strong>Cidade:</strong> ${cidade}<br>
+                    <strong>Estado:</strong> ${estado}
+                </div>
+            `;
+            
+            if (representante.contato) {
+                content += `
+                    <div class="popup-section">
+                        <h4>Contato</h4>
+                        <strong>Nome:</strong> ${representante.contato.nome_contato}<br>
+                        <strong>Email:</strong> ${representante.contato.email}<br>
+                        <strong>Celular:</strong> ${representante.contato.celular}
+                    </div>
+                `;
+            }
+            
+            // Mostrar todas as cidades do representante neste estado
+            if (representante.estados[estado]) {
+                const cidadesEstado = representante.estados[estado].cidades;
+                if (cidadesEstado.length > 1) {
+                    content += `
+                        <div class="popup-section">
+                            <h4>Outras cidades em ${estado} (${cidadesEstado.length})</h4>
+                            <div class="popup-cities">
+                    `;
+                    
+                    cidadesEstado.forEach(c => {
+                        if (c !== cidade) {
+                            content += `<span class="popup-city">${c}</span>`;
+                        }
+                    });
+                    
+                    content += `</div></div>`;
+                }
+            }
+            
+            return content;
+        }
+        
+        // Processar dados e criar marcadores
+        function processData() {
+            if (!representantesData || !municipiosData) {
+                console.error('Dados não carregados');
+                return;
+            }
+            
+            // Limpar marcadores existentes
+            markers.forEach(marker => map.removeLayer(marker));
+            markers = [];
+            
+            let totalCidades = 0;
+            let estadosUnicos = new Set();
+            let cidadesUnicas = new Set();
+            
+            // Processar cada representante
+            for (const [codigo, representante] of Object.entries(representantesData.representantes)) {
+                // Processar cada estado do representante
+                for (const [estado, dadosEstado] of Object.entries(representante.estados)) {
+                    estadosUnicos.add(estado);
+                    
+                    // Processar cada cidade do estado
+                    for (const cidade of dadosEstado.cidades) {
+                        cidadesUnicas.add(`${cidade}-${estado}`);
+                        totalCidades++;
+                        
+                        const marker = createCityMarker(cidade, representante, estado);
+                        if (marker) {
+                            marker.addTo(map);
+                            markers.push(marker);
+                        }
+                    }
+                }
+            }
+            
+            // Atualizar estatísticas
+            document.getElementById('total-representantes').textContent = Object.keys(representantesData.representantes).length;
+            document.getElementById('total-estados').textContent = estadosUnicos.size;
+            document.getElementById('total-cidades').textContent = totalCidades;
+            document.getElementById('cobertura').textContent = `${Math.round((estadosUnicos.size / 27) * 100)}%`;
+            
+            // Ocultar loading
+            document.getElementById('loading').style.display = 'none';
+        }
+        
+        // Função principal
+        async function main() {
+            try {
+                // Inicializar mapa
+                initMap();
+                
+                // Carregar dados
+                const representantesLoaded = await loadRepresentantes();
+                const municipiosLoaded = await loadMunicipios();
+                
+                if (!representantesLoaded || !municipiosLoaded) {
+                    throw new Error('Falha ao carregar dados');
+                }
+                
+                // Processar dados
+                processData();
+                
+            } catch (error) {
+                console.error('Erro:', error);
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('error').style.display = 'block';
+            }
+        }
+        
+        // Iniciar aplicação
+        main();
+    </script>
+</body>
+</html> 

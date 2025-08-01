@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Representantes por Estado - Exemplo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .representante {
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            background: #fafafa;
+        }
+        .representante h3 {
+            color: #333;
+            margin-top: 0;
+        }
+        .estado {
+            margin: 10px 0;
+            padding: 10px;
+            background: #e8f4fd;
+            border-left: 4px solid #2196F3;
+            border-radius: 3px;
+        }
+        .estado h4 {
+            margin: 0 0 10px 0;
+            color: #1976D2;
+        }
+        .cidades {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .cidade {
+            background: #fff;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            border: 1px solid #ddd;
+        }
+        .contato {
+            background: #f0f8ff;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .info {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Representantes por Estado</h1>
+        <p>Esta é uma visualização da nova estrutura onde as cidades são filhas dos estados.</p>
+        
+        <div id="representantes"></div>
+    </div>
+
+    <script>
+        // Função para carregar e exibir os dados
+        async function carregarRepresentantes() {
+            try {
+                const response = await fetch('representantes_por_estado.json');
+                const data = await response.json();
+                
+                const container = document.getElementById('representantes');
+                
+                for (const [codigo, representante] of Object.entries(data.representantes)) {
+                    const div = document.createElement('div');
+                    div.className = 'representante';
+                    
+                    let html = `
+                        <h3>${representante.nome}</h3>
+                        <div class="info">
+                            <strong>Código:</strong> ${representante.codigo}<br>
+                            <strong>Total de cidades:</strong> ${representante.total_cidades}
+                        </div>
+                    `;
+                    
+                    // Informações de contato
+                    if (representante.contato) {
+                        html += `
+                            <div class="contato">
+                                <strong>Contato:</strong> ${representante.contato.nome_contato}<br>
+                                <strong>Email:</strong> ${representante.contato.email}<br>
+                                <strong>Celular:</strong> ${representante.contato.celular}
+                            </div>
+                        `;
+                    }
+                    
+                    // Estados e suas cidades
+                    for (const [estado, dadosEstado] of Object.entries(representante.estados)) {
+                        html += `
+                            <div class="estado">
+                                <h4>${estado} (${dadosEstado.total_cidades} cidades)</h4>
+                                <div class="cidades">
+                        `;
+                        
+                        for (const cidade of dadosEstado.cidades) {
+                            html += `<span class="cidade">${cidade}</span>`;
+                        }
+                        
+                        html += `
+                                </div>
+                            </div>
+                        `;
+                    }
+                    
+                    div.innerHTML = html;
+                    container.appendChild(div);
+                }
+                
+            } catch (error) {
+                console.error('Erro ao carregar dados:', error);
+                document.getElementById('representantes').innerHTML = 
+                    '<p style="color: red;">Erro ao carregar os dados. Verifique se o arquivo representantes_por_estado.json está disponível.</p>';
+            }
+        }
+        
+        // Carregar dados quando a página carregar
+        document.addEventListener('DOMContentLoaded', carregarRepresentantes);
+    </script>
+</body>
+</html>
