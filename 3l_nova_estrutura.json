@@ -1,0 +1,122 @@
+{
+  "representantes": {
+    "3l representacoes comerciais ltda me": {
+      "codigo": "30.0",
+      "nome": "3L REPRESENTACOES COMERCIAIS LTDA ME",
+      "contato": {
+        "nome_contato": "Cristian",
+        "email": "vendasgentil@hotmail.com",
+        "celular": "14-99712-4471"
+      },
+      "observacoes": "Será enviado para pesquisa no mapa",
+      "total_cidades": 71,
+      "estados_atendidos": [
+        "SP"
+      ],
+      "resumo_atividades": "",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "regioes": {
+            "bauru": {
+              "nome": "Região de Bauru",
+              "cidades": [
+                "AGUDOS",
+                "ALVARES MACHADO",
+                "BARIRI",
+                "BASTOS",
+                "BAURU",
+                "BOCAINA",
+                "BORACEIA",
+                "CAFELANDIA",
+                "CANDIDO MOTA",
+                "CONCHAS",
+                "DRACENA",
+                "GARCA",
+                "GAVIAO PEIXOTO",
+                "GUARANTA",
+                "GUATAPARA",
+                "HERCULANDIA",
+                "IACANGA",
+                "IACRI",
+                "IGARACU DO TIETE",
+                "INUBIA PAULISTA",
+                "ITAPUI",
+                "ITATINGA",
+                "LENCOIS PAULISTA",
+                "LUCELIA",
+                "MACATUBA",
+                "MINEIROS DO TIETE",
+                "OSVALDO CRUZ",
+                "PACAEMBU",
+                "PALMITAL",
+                "PARANAPANEMA",
+                "PEDERNEIRAS",
+                "PEREIRAS",
+                "PINHALZINHO",
+                "PIRAJU",
+                "PIRAJUI",
+                "PIRAPOZINHO",
+                "PIRATININGA",
+                "POMPEIA",
+                "PRATANIA",
+                "PROMISSAO",
+                "QUATA",
+                "QUEIROZ",
+                "QUINTANA",
+                "RANCHARIA",
+                "REGENTE FEIJO",
+                "RIBEIRAO DOS INDIOS",
+                "RINOPOLIS",
+                "TARUMA"
+              ]
+            },
+            "araraquara": {
+              "nome": "Região de Araraquara",
+              "cidades": [
+                "ARARAQUARA",
+                "AREALVA",
+                "AREIOPOLIS",
+                "ASSIS",
+                "AVAI"
+              ]
+            },
+            "marilia": {
+              "nome": "Região de Marília",
+              "cidades": [
+                "JAU",
+                "LINS",
+                "MARILIA",
+                "MATAO",
+                "OURINHOS",
+                "TUPA"
+              ]
+            },
+            "presidente_prudente": {
+              "nome": "Região de Presidente Prudente",
+              "cidades": [
+                "MIRANTE DO PARANAPANEMA",
+                "ORIENTE",
+                "PARAGUACU PAULISTA",
+                "PARAPUA",
+                "PEDRINHAS PAULISTA",
+                "PRESIDENTE EPITACIO",
+                "PRESIDENTE PRUDENTE",
+                "PRESIDENTE VENCESLAU"
+              ]
+            },
+            "outras": {
+              "nome": "Outras Regiões",
+              "cidades": [
+                "ADAMANTINA",
+                "CHAVANTES",
+                "JUNQUEIROPOLIS",
+                "TAQUARITUBA"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

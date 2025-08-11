@@ -1,0 +1,229 @@
+{
+  "representantes": {
+    "empresa_a_representacoes": {
+      "codigo": "SP001",
+      "nome": "EMPRESA A REPRESENTACOES LTDA",
+      "contato": {
+        "nome_contato": "João Silva",
+        "email": "joao@empresaa.com.br",
+        "celular": "11-99999-0001"
+      },
+      "observacoes": "Representante da região metropolitana de São Paulo",
+      "total_cidades": 25,
+      "estados_atendidos": ["SP"],
+      "resumo_atividades": "Especializada em produtos industriais",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "regioes": {
+            "metropolitana": {
+              "nome": "Região Metropolitana de São Paulo",
+              "cidades": [
+                "SAO PAULO",
+                "GUARULHOS",
+                "SANTO ANDRE",
+                "SAO BERNARDO DO CAMPO",
+                "OSASCO",
+                "MAUA",
+                "DIADEMA",
+                "CARAPICUIBA",
+                "ITAPECERICA DA SERRA",
+                "EMBU",
+                "COTIA",
+                "SANTANA DE PARNAIBA",
+                "BARUERI",
+                "ITU",
+                "SALTO",
+                "INDAIATUBA",
+                "JUNDIAI",
+                "VALINHOS",
+                "VINHEDO",
+                "LOUVEIRA",
+                "CAJAMAR",
+                "FRANCO DA ROCHA",
+                "MOGI DAS CRUZES",
+                "SUZANO",
+                "POA"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "empresa_b_comercio": {
+      "codigo": "SP002",
+      "nome": "EMPRESA B COMERCIO E REPRESENTACOES",
+      "contato": {
+        "nome_contato": "Maria Santos",
+        "email": "maria@empresab.com.br",
+        "celular": "11-99999-0002"
+      },
+      "observacoes": "Representante da região de Campinas",
+      "total_cidades": 20,
+      "estados_atendidos": ["SP"],
+      "resumo_atividades": "Foco em produtos agrícolas",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "regioes": {
+            "campinas": {
+              "nome": "Região de Campinas",
+              "cidades": [
+                "CAMPINAS",
+                "LIMEIRA",
+                "PIRACICABA",
+                "RIBEIRAO PRETO",
+                "ARARAQUARA",
+                "SAO CARLOS",
+                "ARARAS",
+                "AMERICANA",
+                "SANTA BARBARA DOESTE",
+                "NOVA ODESSA",
+                "VALINHOS",
+                "VINHEDO",
+                "LOUVEIRA",
+                "HOLAMBRA",
+                "COSMOPOLIS",
+                "ARTUR NOGUEIRA",
+                "ENGENHEIRO COELHO",
+                "ITATIBA",
+                "JARINU",
+                "MORUNGABA"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "empresa_c_distribuidora": {
+      "codigo": "SP003",
+      "nome": "EMPRESA C DISTRIBUIDORA LTDA",
+      "contato": {
+        "nome_contato": "Pedro Oliveira",
+        "email": "pedro@empresac.com.br",
+        "celular": "11-99999-0003"
+      },
+      "observacoes": "Representante da região de Santos/Litoral",
+      "total_cidades": 15,
+      "estados_atendidos": ["SP"],
+      "resumo_atividades": "Especializada em produtos marítimos",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "regioes": {
+            "litoral": {
+              "nome": "Região Litorânea de São Paulo",
+              "cidades": [
+                "SANTOS",
+                "SAO VICENTE",
+                "GUARUJA",
+                "CUBATAO",
+                "PRAIA GRANDE",
+                "MONGAGUA",
+                "ITANHAEM",
+                "PERUIBE",
+                "CARAGUATATUBA",
+                "SAO SEBASTIAO",
+                "UBATUBA",
+                "BERTIOGA",
+                "CANANEA",
+                "ILHABELA",
+                "SALESOPOLIS"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "empresa_d_representacoes": {
+      "codigo": "SP004",
+      "nome": "EMPRESA D REPRESENTACOES COMERCIAIS",
+      "contato": {
+        "nome_contato": "Ana Costa",
+        "email": "ana@empresad.com.br",
+        "celular": "11-99999-0004"
+      },
+      "observacoes": "Representante da região de Sorocaba",
+      "total_cidades": 18,
+      "estados_atendidos": ["SP"],
+      "resumo_atividades": "Foco em produtos tecnológicos",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "regioes": {
+            "sorocaba": {
+              "nome": "Região de Sorocaba",
+              "cidades": [
+                "SOROCABA",
+                "ITU",
+                "SALTO",
+                "INDAIATUBA",
+                "JUNDIAI",
+                "VALINHOS",
+                "VINHEDO",
+                "LOUVEIRA",
+                "CAJAMAR",
+                "FRANCO DA ROCHA",
+                "MOGI DAS CRUZES",
+                "SUZANO",
+                "POA",
+                "SANTO ANDRE",
+                "MAUA",
+                "DIADEMA",
+                "SAO CAETANO DO SUL",
+                "TABOAO DA SERRA"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "empresa_e_comercio": {
+      "codigo": "SP005",
+      "nome": "EMPRESA E COMERCIO E REPRESENTACOES",
+      "contato": {
+        "nome_contato": "Carlos Ferreira",
+        "email": "carlos@empresae.com.br",
+        "celular": "11-99999-0005"
+      },
+      "observacoes": "Representante da região de Bauru",
+      "total_cidades": 22,
+      "estados_atendidos": ["SP"],
+      "resumo_atividades": "Especializada em produtos alimentícios",
+      "performance": {},
+      "estados": {
+        "SP": {
+          "regioes": {
+            "bauru": {
+              "nome": "Região de Bauru",
+              "cidades": [
+                "BAURU",
+                "JAU",
+                "LINS",
+                "BOTUCATU",
+                "MARILIA",
+                "LENCOIS PAULISTA",
+                "AGUDOS",
+                "PIRAJU",
+                "PIRAJUI",
+                "PIRAPOZINHO",
+                "PIRATININGA",
+                "PROMISSAO",
+                "QUADRA",
+                "QUATA",
+                "QUEIROZ",
+                "QUINTANA",
+                "RANCHARIA",
+                "REGENTE FEIJO",
+                "RIBEIRAO DOS INDIOS",
+                "RINCAO",
+                "RINOPOLIS",
+                "SABINO"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+} 
